@@ -33,9 +33,10 @@
 
     Private Sub dataListaVentas_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dataListaVentas.CellDoubleClick
         If dataListaVentas.Rows.Count <> 0 Then
-            Combox.idVenta = txtVentaId.Text
-            Combox.fechaVenta = txtFecha.Text
-            Combox.permiso = "VerDetalles"
+            'Combox.idVenta = txtVentaId.Text
+            'Combox.fechaVenta = txtFecha.Text
+            'Combox.permiso = "VerDetalles"
+            Frm_Boleta.IdVenta = txtVentaId.Text
             Frm_Boleta.ShowDialog()
         End If
     End Sub
@@ -45,10 +46,10 @@
         resul = MessageBox.Show("¿Imprimir boleta?", "Imprimiendo documento", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
         If resul = DialogResult.OK Then
 
-            Combox.idVenta = txtVentaId.Text
-            Combox.fechaVenta = txtFecha.Text
-            Combox.permiso = "0"
-
+            'Combox.idVenta = txtVentaId.Text
+            'Combox.fechaVenta = txtFecha.Text
+            'Combox.permiso = "0"
+            Frm_Boleta.IdVenta = txtVentaId.Text
             Frm_Boleta.ShowDialog()
         End If
     End Sub

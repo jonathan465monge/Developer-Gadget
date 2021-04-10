@@ -76,13 +76,15 @@ Public Class Frm_Venta
             resul = MessageBox.Show("¿Imprimir factura?", "Imprimiendo documento", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
             If resul = DialogResult.OK Then
 
-                Combox.idVenta = txt_ventaId.Text
-                Combox.totalVenta = txtTotalVenta.Text
-                Combox.cambio = txtCambio.Text
-                Combox.pago = txtPagoCliente.Text
-                Combox.fechaVenta = Label6.Text
-                Combox.permiso = "0"
+                'Combox.idVenta = txt_ventaId.Text
+                'Combox.totalVenta = txtTotalVenta.Text
+                'Combox.cambio = txtCambio.Text
+                'Combox.pago = txtPagoCliente.Text
+                'Combox.fechaVenta = Label6.Text
+                'Combox.permiso = "0"
+                Frm_Boleta.IdVenta = txt_ventaId.Text
                 Frm_Boleta.ShowDialog()
+
             End If
         End If
         labelVenta.Text = "1"
@@ -275,6 +277,10 @@ Public Class Frm_Venta
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub txt_ventaId_TextChanged(sender As Object, e As EventArgs) Handles txt_ventaId.TextChanged
 
     End Sub
 
