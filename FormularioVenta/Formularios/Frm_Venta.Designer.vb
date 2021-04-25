@@ -40,9 +40,7 @@ Partial Class Frm_Venta
         Me.Label11 = New System.Windows.Forms.Label()
         Me.ventaNew_btn = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.txt_ventaId = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.txt_preciototal = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -55,13 +53,6 @@ Partial Class Frm_Venta
         Me.txt_prodId = New System.Windows.Forms.TextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.dataFact = New System.Windows.Forms.DataGridView()
-        Me.VentaID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ProductoID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombreProducto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Stock = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PrecioUnidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Total = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.labelVenta = New System.Windows.Forms.Label()
@@ -76,6 +67,12 @@ Partial Class Frm_Venta
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.eliminardeLista_btn = New System.Windows.Forms.Button()
+        Me.ProductoID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombreProducto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Stock = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PrecioUnidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Total = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox2.SuspendLayout()
         CType(Me.pb_ProdImg, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
@@ -105,9 +102,7 @@ Partial Class Frm_Venta
         Me.GroupBox2.Controls.Add(Me.Label11)
         Me.GroupBox2.Controls.Add(Me.ventaNew_btn)
         Me.GroupBox2.Controls.Add(Me.Label6)
-        Me.GroupBox2.Controls.Add(Me.txt_ventaId)
         Me.GroupBox2.Controls.Add(Me.Label4)
-        Me.GroupBox2.Controls.Add(Me.Label1)
         Me.GroupBox2.Controls.Add(Me.txt_preciototal)
         Me.GroupBox2.Controls.Add(Me.Label5)
         Me.GroupBox2.Controls.Add(Me.Label7)
@@ -294,16 +289,6 @@ Partial Class Frm_Venta
         Me.Label6.TabIndex = 13
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'txt_ventaId
-        '
-        Me.txt_ventaId.Location = New System.Drawing.Point(124, 25)
-        Me.txt_ventaId.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txt_ventaId.Name = "txt_ventaId"
-        Me.txt_ventaId.ReadOnly = True
-        Me.txt_ventaId.Size = New System.Drawing.Size(105, 26)
-        Me.txt_ventaId.TabIndex = 0
-        Me.txt_ventaId.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
@@ -312,15 +297,6 @@ Partial Class Frm_Venta
         Me.Label4.Size = New System.Drawing.Size(96, 20)
         Me.Label4.TabIndex = 20
         Me.Label4.Text = "Precio Total:"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(8, 29)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(110, 20)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Codigo Venta:"
         '
         'txt_preciototal
         '
@@ -437,7 +413,7 @@ Partial Class Frm_Venta
         Me.dataFact.AllowUserToAddRows = False
         Me.dataFact.AllowUserToDeleteRows = False
         Me.dataFact.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dataFact.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.VentaID, Me.ProductoID, Me.NombreProducto, Me.Stock, Me.PrecioUnidad, Me.Cantidad, Me.Total})
+        Me.dataFact.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductoID, Me.NombreProducto, Me.Stock, Me.PrecioUnidad, Me.Cantidad, Me.Total})
         Me.dataFact.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dataFact.Location = New System.Drawing.Point(3, 94)
         Me.dataFact.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -448,63 +424,6 @@ Partial Class Frm_Venta
         Me.dataFact.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dataFact.Size = New System.Drawing.Size(1032, 578)
         Me.dataFact.TabIndex = 28
-        '
-        'VentaID
-        '
-        Me.VentaID.HeaderText = "VentaID"
-        Me.VentaID.MinimumWidth = 8
-        Me.VentaID.Name = "VentaID"
-        Me.VentaID.ReadOnly = True
-        Me.VentaID.Visible = False
-        Me.VentaID.Width = 150
-        '
-        'ProductoID
-        '
-        Me.ProductoID.HeaderText = "ProductoID"
-        Me.ProductoID.MinimumWidth = 8
-        Me.ProductoID.Name = "ProductoID"
-        Me.ProductoID.ReadOnly = True
-        Me.ProductoID.Width = 150
-        '
-        'NombreProducto
-        '
-        Me.NombreProducto.HeaderText = "NombreProducto"
-        Me.NombreProducto.MinimumWidth = 8
-        Me.NombreProducto.Name = "NombreProducto"
-        Me.NombreProducto.ReadOnly = True
-        Me.NombreProducto.Width = 150
-        '
-        'Stock
-        '
-        Me.Stock.HeaderText = "Stock"
-        Me.Stock.MinimumWidth = 8
-        Me.Stock.Name = "Stock"
-        Me.Stock.ReadOnly = True
-        Me.Stock.Width = 150
-        '
-        'PrecioUnidad
-        '
-        Me.PrecioUnidad.HeaderText = "PrecioUnidad"
-        Me.PrecioUnidad.MinimumWidth = 8
-        Me.PrecioUnidad.Name = "PrecioUnidad"
-        Me.PrecioUnidad.ReadOnly = True
-        Me.PrecioUnidad.Width = 150
-        '
-        'Cantidad
-        '
-        Me.Cantidad.HeaderText = "Cantidad"
-        Me.Cantidad.MinimumWidth = 8
-        Me.Cantidad.Name = "Cantidad"
-        Me.Cantidad.ReadOnly = True
-        Me.Cantidad.Width = 150
-        '
-        'Total
-        '
-        Me.Total.HeaderText = "Total"
-        Me.Total.MinimumWidth = 8
-        Me.Total.Name = "Total"
-        Me.Total.ReadOnly = True
-        Me.Total.Width = 150
         '
         'Panel2
         '
@@ -662,6 +581,54 @@ Partial Class Frm_Venta
         Me.eliminardeLista_btn.Text = "Eliminar de la Lista"
         Me.eliminardeLista_btn.UseVisualStyleBackColor = True
         '
+        'ProductoID
+        '
+        Me.ProductoID.HeaderText = "ProductoID"
+        Me.ProductoID.MinimumWidth = 8
+        Me.ProductoID.Name = "ProductoID"
+        Me.ProductoID.ReadOnly = True
+        Me.ProductoID.Width = 150
+        '
+        'NombreProducto
+        '
+        Me.NombreProducto.HeaderText = "NombreProducto"
+        Me.NombreProducto.MinimumWidth = 8
+        Me.NombreProducto.Name = "NombreProducto"
+        Me.NombreProducto.ReadOnly = True
+        Me.NombreProducto.Width = 150
+        '
+        'Stock
+        '
+        Me.Stock.HeaderText = "Stock"
+        Me.Stock.MinimumWidth = 8
+        Me.Stock.Name = "Stock"
+        Me.Stock.ReadOnly = True
+        Me.Stock.Width = 150
+        '
+        'PrecioUnidad
+        '
+        Me.PrecioUnidad.HeaderText = "PrecioUnidad"
+        Me.PrecioUnidad.MinimumWidth = 8
+        Me.PrecioUnidad.Name = "PrecioUnidad"
+        Me.PrecioUnidad.ReadOnly = True
+        Me.PrecioUnidad.Width = 150
+        '
+        'Cantidad
+        '
+        Me.Cantidad.HeaderText = "Cantidad"
+        Me.Cantidad.MinimumWidth = 8
+        Me.Cantidad.Name = "Cantidad"
+        Me.Cantidad.ReadOnly = True
+        Me.Cantidad.Width = 150
+        '
+        'Total
+        '
+        Me.Total.HeaderText = "Total"
+        Me.Total.MinimumWidth = 8
+        Me.Total.Name = "Total"
+        Me.Total.ReadOnly = True
+        Me.Total.Width = 150
+        '
         'Frm_Venta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -697,9 +664,7 @@ Partial Class Frm_Venta
     Friend WithEvents Label11 As Label
     Friend WithEvents ventaNew_btn As Button
     Friend WithEvents Label6 As Label
-    Friend WithEvents txt_ventaId As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents Label1 As Label
     Friend WithEvents txt_preciototal As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label7 As Label
@@ -733,12 +698,11 @@ Partial Class Frm_Venta
     Friend WithEvents txtStock As TextBox
     Public WithEvents txtestado As TextBox
     Friend WithEvents Label17 As Label
-    Friend WithEvents VentaID As DataGridViewTextBoxColumn
+    Friend WithEvents labelVenta As Label
     Friend WithEvents ProductoID As DataGridViewTextBoxColumn
     Friend WithEvents NombreProducto As DataGridViewTextBoxColumn
     Friend WithEvents Stock As DataGridViewTextBoxColumn
     Friend WithEvents PrecioUnidad As DataGridViewTextBoxColumn
     Friend WithEvents Cantidad As DataGridViewTextBoxColumn
     Friend WithEvents Total As DataGridViewTextBoxColumn
-    Friend WithEvents labelVenta As Label
 End Class
