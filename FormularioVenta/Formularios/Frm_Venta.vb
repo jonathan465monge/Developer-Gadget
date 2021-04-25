@@ -4,12 +4,13 @@ Imports iTextSharp.text.pdf
 Imports System.IO
 
 Public Class Frm_Venta
-
+    Dim NVenta As Boolean
     Private Sub ventadetalle_btn_Click(sender As Object, e As EventArgs) Handles ventadetalle_btn.Click
         If dataFact.Rows.Count <> 0 Then
             txtPagoCliente.Enabled = True
             txtCambio.Enabled = True
             btnConfirmarVenta.Enabled = True
+            MessageBox.Show("Venta Realizada", "Venta", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Else
             MessageBox.Show("No hay productos en la lista de Venta", "Ingrese productos", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
@@ -55,39 +56,35 @@ Public Class Frm_Venta
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnConfirmarVenta.Click
-        Dim dts As New DetalleVenta
-        Dim funcion As New FDetalleVenta
+        'Dim dts As New DetalleVenta
+        Dim idVenta As Integer
+        'objeto List para pasar los datos del grid
+        Dim dts = New List(Of DetalleVenta)
+        Dim funcion As New FVenta
+        Dim detalle As New DetalleVenta
+        'pasando los datos del grid al objeto
 
-        For Each fila As DataGridViewRow In dataFact.Rows
-            Try
-                dts.Cantidad = fila.Cells(5).Value()
-                dts.Precio = fila.Cells(6).Value()
-                dts.ProductoId = fila.Cells(1).Value()
-                dts.VentaId = fila.Cells(0).Value()
-
-                funcion.insertarDetalleVenta(dts)
-            Catch ex As Exception
-                MsgBox(ex.Message)
-            End Try
-        Next
-        limpiaVent()
-        If MessageBox.Show("Venta realizada", "Guardando registros", MessageBoxButtons.OK, MessageBoxIcon.Information) = DialogResult.OK Then
-            Dim resul As DialogResult
-            resul = MessageBox.Show("¿Imprimir factura?", "Imprimiendo documento", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
-            If resul = DialogResult.OK Then
-
-                'Combox.idVenta = txt_ventaId.Text
-                'Combox.totalVenta = txtTotalVenta.Text
-                'Combox.cambio = txtCambio.Text
-                'Combox.pago = txtPagoCliente.Text
-                'Combox.fechaVenta = Label6.Text
-                'Combox.permiso = "0"
-                Frm_Boleta.IdVenta = txt_ventaId.Text
-                Frm_Boleta.ShowDialog()
-
+        Try
+            For Each fila As DataGridViewRow In dataFact.Rows
+                detalle.Cantidad = fila.Cells(4).Value()
+                detalle.Precio = fila.Cells(5).Value()
+                detalle.ProductoId = fila.Cells(0).Value()
+                dts.Add(detalle)
+            Next
+            idVenta = funcion.insertarVenta(dts)
+            If MessageBox.Show("Venta realizada", "Guardando registros", MessageBoxButtons.OK, MessageBoxIcon.Information) = DialogResult.OK Then
+                Dim resul As DialogResult
+                resul = MessageBox.Show("¿Imprimir factura?", "Imprimiendo documento", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
+                If resul = DialogResult.OK Then
+                    Frm_Boleta.IdVenta = idVenta
+                    Frm_Boleta.ShowDialog()
+                End If
             End If
-        End If
-        labelVenta.Text = "1"
+            limpiaVent()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+
     End Sub
 
     Private Sub txtPagoCliente_TextChanged(sender As Object, e As EventArgs) Handles txtPagoCliente.TextChanged
@@ -106,13 +103,13 @@ Public Class Frm_Venta
     End Sub
 
     Private Sub buscarProd_btn_Click(sender As Object, e As EventArgs) Handles buscarProd_btn.Click
-        If txt_ventaId.Text <> "" Then
-            Combox.lblVenta = "venta"
+        'If txt_ventaId.Text <> "" Then
+        Combox.lblVenta = "venta"
             AddOwnedForm(Form_Inventario)
             Form_Inventario.ShowDialog()
-        Else
-            MessageBox.Show("Para iniciar una venta, presione el boton 'Nueva Venta'", "Nueva Venta", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        End If
+        'Else
+        '    MessageBox.Show("Para iniciar una venta, presione el boton 'Nueva Venta'", "Nueva Venta", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        'End If
     End Sub
 
     Private Sub txtCantidad_TextChanged(sender As Object, e As EventArgs) Handles txtCantidad.TextChanged
@@ -129,28 +126,29 @@ Public Class Frm_Venta
 
     Private Sub agregarListado_btn_Click(sender As Object, e As EventArgs) Handles agregarListado_btn.Click
         If labelVenta.Text = "0" Then
-            If txt_ventaId.Text <> "" Then
-                If txtCantidad.Text > 0 Then
-                    If dataFact.Rows.Count <= 10 Then
-                        dataFact.Rows.Add(txt_ventaId.Text, txt_prodId.Text, txt_nombreProd.Text, txtStock.Text, txt_precioUnidad.Text, txtCantidad.Text, txt_preciototal.Text)
-                        alternarColoDatGV(dataFact)
-                        Me.dataFact.ClearSelection()
-                        Me.dataFact.CurrentCell = Me.dataFact.Rows(Me.dataFact.RowCount - 1).Cells(2)
-                        Me.dataFact.Refresh()
-                    Else
-                        MessageBox.Show("El maximo de productos por boleta es de 10 elementos" & vbCrLf & "Imprima la factura de esta venta y luego añade otra", "Maximo excedido", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
-                    End If
+            'If txt_ventaId.Text <> "" Then
+            If txtCantidad.Text > 0 Then
+                If dataFact.Rows.Count <= 10 Then
+                    'dataFact.Rows.Add(txt_ventaId.Text, txt_prodId.Text, txt_nombreProd.Text, txtStock.Text, txt_precioUnidad.Text, txtCantidad.Text, txt_preciototal.Text)
+                    dataFact.Rows.Add(txt_prodId.Text, txt_nombreProd.Text, txtStock.Text, txt_precioUnidad.Text, txtCantidad.Text, txt_preciototal.Text)
+                    alternarColoDatGV(dataFact)
+                    Me.dataFact.ClearSelection()
+                    Me.dataFact.CurrentCell = Me.dataFact.Rows(Me.dataFact.RowCount - 1).Cells(1)
+                    Me.dataFact.Refresh()
                 Else
-                    MessageBox.Show("Debe agregar la cantidad del producto a vender", "Ingrese una cantidad", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    MessageBox.Show("El maximo de productos por boleta es de 10 elementos" & vbCrLf & "Imprima la factura de esta venta y luego añade otra", "Maximo excedido", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
                 End If
             Else
-                MessageBox.Show("Para iniciar una venta, presione el boton 'Nueva Venta'", "Nueva Venta", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show("Debe agregar la cantidad del producto a vender", "Ingrese una cantidad", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
-
-            limpiarVenta()
         Else
-            MessageBox.Show("Esta venta ya se realizo, presione el boton Nueva venta'", "Nueva Venta", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("Para iniciar una venta, presione el boton 'Nueva Venta'", "Nueva Venta", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
+
+        limpiarVenta()
+        'Else
+        'MessageBox.Show("Esta venta ya se realizo, presione el boton Nueva venta'", "Nueva Venta", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        'End If
     End Sub
 
     Private Sub ventaNew_btn_Click(sender As Object, e As EventArgs) Handles ventaNew_btn.Click
@@ -158,26 +156,27 @@ Public Class Frm_Venta
             Dim resul As DialogResult
             resul = MessageBox.Show("¿Realizar nueva venta?" & vbCrLf & "Si confirma, se borrarra la venta que esta realizando actualmente", "Nueva venta", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
             If resul = DialogResult.OK Then
-                Dim funcion2 As New FVenta
+                'Dim funcion2 As New FVenta
 
                 txtTotalVenta.Text = 0
                 Label6.Text = DateTime.Now.ToString("dd/MM/yyyy")
-                If (funcion2.insertarVenta) Then
-                    Dim id As String = funcion2.Idventa().ToString
-                    txt_ventaId.Text = id
-                End If
+                'If (funcion2.insertarVenta) Then
+                '    Dim id As String = funcion2.Idventa().ToString
+                '    txt_ventaId.Text = id
+                'End If
+                NVenta = True
                 limpiarVenta()
                 dataFact.Rows.Clear()
             End If
         Else
-            Dim funcion As New FVenta
+            'Dim funcion As New FVenta
             labelVenta.Text = "0"
             txtTotalVenta.Text = 0
             Label6.Text = DateTime.Now.ToString("dd/MM/yyyy")
-            If (funcion.insertarVenta) Then
-                Dim id As String = funcion.Idventa().ToString
-                txt_ventaId.Text = id
-            End If
+            'If (funcion.insertarVenta) Then
+            '    Dim id As String = funcion.Idventa().ToString
+            '    txt_ventaId.Text = id
+            'End If
             limpiarVenta()
         End If
     End Sub
@@ -203,13 +202,13 @@ Public Class Frm_Venta
             .RowsDefaultCellStyle.BackColor = Color.LightBlue
             .RowsDefaultCellStyle.SelectionBackColor = Color.DarkRed
             .RowsDefaultCellStyle.SelectionForeColor = Color.White
+            '.Columns(0).Visible = False
             .Columns(0).Visible = False
-            .Columns(1).Visible = False
-            .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-            .Columns(3).Visible = False
+            .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+            .Columns(2).Visible = False
+            .Columns(3).Width = 100
             .Columns(4).Width = 100
             .Columns(5).Width = 100
-            .Columns(6).Width = 100
         End With
     End Sub
 
@@ -224,12 +223,12 @@ Public Class Frm_Venta
     End Sub
     Private Sub dataFact_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dataFact.CellClick
         If dataFact.Rows.Count <> 0 Then
-            Dim id = dataFact.SelectedCells.Item(1).Value
+            Dim id = dataFact.SelectedCells.Item(0).Value
             Dim cantidad = dataFact.SelectedCells.Item(4).Value
             Dim Unidad = dataFact.SelectedCells.Item(3).Value
             Dim Total = dataFact.SelectedCells.Item(5).Value
-            Dim nombre = dataFact.SelectedCells.Item(2).Value
-            Dim stock = dataFact.SelectedCells.Item(3).Value
+            Dim nombre = dataFact.SelectedCells.Item(1).Value
+            Dim stock = dataFact.SelectedCells.Item(2).Value
 
             txtStock.Text = stock
             txtCantidad.Text = cantidad
@@ -245,8 +244,8 @@ Public Class Frm_Venta
 
     Private Sub btnAplicar_Click(sender As Object, e As EventArgs) Handles btnAplicar.Click
         Dim row As DataGridViewRow = dataFact.CurrentRow
-        row.Cells(5).Value = txtCantidad.Text
-        row.Cells(6).Value = txt_preciototal.Text
+        row.Cells(4).Value = txtCantidad.Text
+        row.Cells(5).Value = txt_preciototal.Text
         Me.dataFact.ClearSelection()
         Me.dataFact.CurrentCell = Me.dataFact.Rows(Me.dataFact.RowCount - 1).Cells(5)
         limpiarVenta()
@@ -263,10 +262,10 @@ Public Class Frm_Venta
     Sub TotalVenta()
         Dim total As Decimal = 0
         For Each fila As DataGridViewRow In dataFact.Rows
-            If fila.Cells(6).Value Is Nothing Then
+            If fila.Cells(5).Value Is Nothing Then
                 Exit Sub
             Else
-                total += CDec(fila.Cells(6).Value)
+                total += CDec(fila.Cells(5).Value)
             End If
         Next
         txtTotalVenta.Text = total
@@ -280,7 +279,7 @@ Public Class Frm_Venta
 
     End Sub
 
-    Private Sub txt_ventaId_TextChanged(sender As Object, e As EventArgs) Handles txt_ventaId.TextChanged
+    Private Sub txt_ventaId_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 

@@ -23,6 +23,7 @@ Partial Class Form_Login
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txt_Usuario = New System.Windows.Forms.TextBox()
         Me.txt_Pass = New System.Windows.Forms.TextBox()
@@ -31,11 +32,10 @@ Partial Class Form_Login
         Me.lbl_PassInc = New System.Windows.Forms.Label()
         Me.btn_MInimizar = New System.Windows.Forms.PictureBox()
         Me.btn_Cerrar = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btn_MInimizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btn_Cerrar, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -47,6 +47,16 @@ Partial Class Form_Login
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(370, 437)
         Me.Panel1.TabIndex = 0
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.SistemaDeVentas.My.Resources.Resources.Libro1pequeño
+        Me.PictureBox1.Location = New System.Drawing.Point(50, 91)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(252, 263)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'Label1
         '
@@ -137,16 +147,6 @@ Partial Class Form_Login
         Me.btn_Cerrar.TabIndex = 6
         Me.btn_Cerrar.TabStop = False
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.SistemaDeVentas.My.Resources.Resources.Libro1pequeño
-        Me.PictureBox1.Location = New System.Drawing.Point(50, 91)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(252, 263)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
         'Form_Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -168,9 +168,9 @@ Partial Class Form_Login
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form_Login"
         Me.Panel1.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btn_MInimizar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btn_Cerrar, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
