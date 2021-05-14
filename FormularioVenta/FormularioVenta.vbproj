@@ -30,6 +30,8 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -113,9 +115,11 @@
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1440.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisualBasic.PowerPacks.Vs.1.0.0\lib\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
+    </Reference>
     <Reference Include="ShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
       <HintPath>..\packages\CrystalReports.FlashControlV71.13.0.3501\lib\net20\ShockwaveFlashObjects.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -161,13 +165,6 @@
     <Compile Include="Datos\orden_compra.vb" />
     <Compile Include="Datos\Proveedor.vb" />
     <Compile Include="Datos\Usser.vb" />
-    <Compile Include="Form_Ventas.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form_Ventas.Designer.vb">
-      <DependentUpon>Form_Ventas.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Formularios\Form_Multi.Designer.vb">
       <DependentUpon>Form_Multi.vb</DependentUpon>
     </Compile>
@@ -216,12 +213,6 @@
     <Compile Include="Formularios\Form_AdmProductos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Vuelto.Designer.vb">
-      <DependentUpon>Form_Vuelto.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form_Vuelto.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Formularios\Frm_CompraDetalles.Designer.vb">
       <DependentUpon>Frm_CompraDetalles.vb</DependentUpon>
     </Compile>
@@ -238,6 +229,18 @@
       <DependentUpon>Frm_Boleta.vb</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Frm_Boleta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Ventas.Designer.vb">
+      <DependentUpon>Form_Ventas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Ventas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Vuelto.Designer.vb">
+      <DependentUpon>Form_Vuelto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Vuelto.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Modulos\Combox.vb" />
@@ -319,9 +322,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form_Ventas.resx">
-      <DependentUpon>Form_Ventas.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Form_Multi.resx">
       <DependentUpon>Form_Multi.vb</DependentUpon>
     </EmbeddedResource>
@@ -346,9 +346,6 @@
     <EmbeddedResource Include="Formularios\Form_AdmProductos.resx">
       <DependentUpon>Form_AdmProductos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Vuelto.resx">
-      <DependentUpon>Form_Vuelto.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Frm_Venta.resx">
       <DependentUpon>Frm_Venta.vb</DependentUpon>
     </EmbeddedResource>
@@ -358,6 +355,13 @@
     <EmbeddedResource Include="Formularios\Frm_Boleta.resx">
       <DependentUpon>Frm_Boleta.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Ventas.resx">
+      <DependentUpon>Form_Ventas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Vuelto.resx">
+      <DependentUpon>Form_Vuelto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Factura.rdlc" />
     <EmbeddedResource Include="Reportes\Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
@@ -554,6 +558,9 @@
     <Folder Include="My Project\DataSources\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="SqlServerTypes\Loader.cs" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
@@ -568,9 +575,6 @@
     <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

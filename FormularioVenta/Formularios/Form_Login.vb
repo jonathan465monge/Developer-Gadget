@@ -108,4 +108,8 @@
     Private Sub btn_Cerrar_MouseLeave(sender As Object, e As EventArgs) Handles btn_Cerrar.MouseLeave
         btn_Cerrar.BackColor = Color.LemonChiffon
     End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+
+    End Sub
 End Class

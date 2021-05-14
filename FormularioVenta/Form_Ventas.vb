@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class Form_Ventas
-
+    Dim NVenta As Boolean
     Private dt As New DataTable
     Public _frmProd As Form_Producto
     Public _frmVuelto As Form_Vuelto
@@ -20,11 +20,11 @@ Public Class Form_Ventas
 
         Label6.Text = DateTime.Now.ToString("dd/MM/yyyy")
 
-        If (funcion.insertarVenta) Then
+        If (NVenta) Then
             panel_detalleVenta.Visible = True
 
-            Dim id As String = funcion.Idventa().ToString
-            txt_ventaId.Text = id
+            'Dim id As String = funcion.Idventa().ToString
+            'txt_ventaId.Text = id
 
         Else
             panel_detalleVenta.Visible = False
@@ -99,11 +99,11 @@ Public Class Form_Ventas
         Dim funcion As New FVenta
 
         Label6.Text = DateTime.Now.ToString("dd/MM/yyyy")
-
-        If (funcion.insertarVenta) Then
-            Dim id As String = funcion.Idventa().ToString
-            txt_ventaId.Text = id
-        End If
+        NVenta = True
+        'If (funcion.insertarVenta) Then
+        'Dim id As String = funcion.Idventa().ToString
+        '    txt_ventaId.Text = id
+        'End If
         limpiarVenta()
     End Sub
 
@@ -119,12 +119,12 @@ Public Class Form_Ventas
                     dts.ProductoId = txt_prodId.Text
                     dts.VentaId = txt_ventaId.Text
 
-                    If funcion.insertarDetalleVenta(dts) Then
-                        limpiarVenta()
-                        ventaRecien()
-                    Else
-                        MessageBox.Show("Ocurrio un problema al añadir el producto a la orden...", "Intente de Nuevo :/", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    End If
+                    ''If funcion.insertarDetalleVenta(dts) Then
+                    ''    limpiarVenta()
+                    ''    ventaRecien()
+                    ''Else
+                    ''    MessageBox.Show("Ocurrio un problema al añadir el producto a la orden...", "Intente de Nuevo :/", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    ''End If
                 Catch ex As Exception
                     MsgBox(ex.Message)
                 End Try

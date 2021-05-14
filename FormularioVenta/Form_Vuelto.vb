@@ -43,23 +43,23 @@ Public Class Form_Vuelto
 
         frmVenta.Label6.Text = DateTime.Now.ToString("dd/MM/yyyy")
 
-        If (funcion.insertarVenta) Then
+        'If (funcion.insertarVenta) Then
 
-            Dim con As New SqlConnection
-            con = New SqlConnection("data source=(local);initial catalog=SysLibreria;integrated security=true")
-            Dim consulta As String = "SELECT TOP 1 VentaId FROM Venta ORDER BY VentaId DESC"
-            Dim comando As New SqlCommand(consulta, con)
-            Dim drd As SqlDataReader
+        '    Dim con As New SqlConnection
+        '    con = New SqlConnection("data source=(local);initial catalog=SysLibreria;integrated security=true")
+        '    Dim consulta As String = "SELECT TOP 1 VentaId FROM Venta ORDER BY VentaId DESC"
+        '    Dim comando As New SqlCommand(consulta, con)
+        '    Dim drd As SqlDataReader
 
-            con.Open()
-            drd = comando.ExecuteReader()
+        '    con.Open()
+        '    drd = comando.ExecuteReader()
 
-            If drd.Read() Then
-                frmVenta.txt_ventaId.Text() = drd.Item("VentaId").ToString()
-            End If
-            drd.Close()
-            con.Close()
-        End If
+        '    If drd.Read() Then
+        '        frmVenta.txt_ventaId.Text() = drd.Item("VentaId").ToString()
+        '    End If
+        '    drd.Close()
+        '    con.Close()
+        'End If
         frmVenta.dataFact.DataSource = Nothing
         Dim frmProd As New Form_Producto
         frmProd.mostrar()

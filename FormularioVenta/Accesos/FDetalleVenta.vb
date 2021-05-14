@@ -76,30 +76,30 @@ Public Class FDetalleVenta
         End Try
     End Function
 
-    Public Function insertarDetalleVenta(ByVal dts As DetalleVenta) As Boolean
-        Try
-            conectado()
-            comando = New SqlCommand("insertar_DetalleVentaSinDoc")
-            comando.CommandType = CommandType.StoredProcedure
-            comando.Connection = cnn
+    'Public Function insertarDetalleVenta(ByVal dts As DetalleVenta) As Boolean
+    '    Try
+    '        conectado()
+    '        comando = New SqlCommand("insertar_DetalleVentaSinDoc")
+    '        comando.CommandType = CommandType.StoredProcedure
+    '        comando.Connection = cnn
 
-            comando.Parameters.AddWithValue("@cantidad", dts.Cantidad)
-            comando.Parameters.AddWithValue("@precio_venta", dts.Precio)
-            comando.Parameters.AddWithValue("@productoid", dts.ProductoId)
-            comando.Parameters.AddWithValue("@ventaid", dts.VentaId)
+    '        comando.Parameters.AddWithValue("@cantidad", dts.Cantidad)
+    '        comando.Parameters.AddWithValue("@precio_venta", dts.Precio)
+    '        comando.Parameters.AddWithValue("@productoid", dts.ProductoId)
+    '        comando.Parameters.AddWithValue("@ventaid", dts.VentaId)
 
-            If comando.ExecuteNonQuery Then
-                Return True
-            Else
-                Return False
-            End If
-        Catch ex As Exception
-            MsgBox(ex.Message)
-            Return False
-        Finally
-            desconectado()
-        End Try
-    End Function
+    '        If comando.ExecuteNonQuery Then
+    '            Return True
+    '        Else
+    '            Return False
+    '        End If
+    '    Catch ex As Exception
+    '        MsgBox(ex.Message)
+    '        Return False
+    '    Finally
+    '        desconectado()
+    '    End Try
+    'End Function
 
     Public Function eliminarRegistroDetalle(ByVal dts As DetalleVenta) As Boolean
         Try
