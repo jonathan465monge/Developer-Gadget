@@ -110,34 +110,34 @@ Partial Class Form_Compras
         Me.TabControl1.Controls.Add(Me.historial)
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
-        Me.TabControl1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TabControl1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1485, 798)
+        Me.TabControl1.Size = New System.Drawing.Size(990, 519)
         Me.TabControl1.TabIndex = 0
         '
         'comprar
         '
+        Me.comprar.BackColor = System.Drawing.Color.Black
         Me.comprar.Controls.Add(Me.Panel4)
         Me.comprar.Controls.Add(Me.Panel3)
-        Me.comprar.Location = New System.Drawing.Point(4, 29)
-        Me.comprar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.comprar.Location = New System.Drawing.Point(4, 22)
+        Me.comprar.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.comprar.Name = "comprar"
-        Me.comprar.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.comprar.Size = New System.Drawing.Size(1477, 765)
+        Me.comprar.Padding = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.comprar.Size = New System.Drawing.Size(982, 493)
         Me.comprar.TabIndex = 0
         Me.comprar.Text = "Realizar Compra"
-        Me.comprar.UseVisualStyleBackColor = True
         '
         'Panel4
         '
         Me.Panel4.Controls.Add(Me.dataCompraRecien)
         Me.Panel4.Controls.Add(Me.panelConfirmar)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel4.Location = New System.Drawing.Point(455, 4)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Panel4.Location = New System.Drawing.Point(303, 3)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(1019, 757)
+        Me.Panel4.Size = New System.Drawing.Size(677, 487)
         Me.Panel4.TabIndex = 5
         '
         'dataCompraRecien
@@ -148,13 +148,13 @@ Partial Class Form_Compras
         Me.dataCompraRecien.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CompraID, Me.ProductoID, Me.NombreProducto, Me.Cantidad, Me.PrecioTotal, Me.PrecioUnidad})
         Me.dataCompraRecien.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dataCompraRecien.Location = New System.Drawing.Point(0, 0)
-        Me.dataCompraRecien.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.dataCompraRecien.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.dataCompraRecien.Name = "dataCompraRecien"
         Me.dataCompraRecien.ReadOnly = True
         Me.dataCompraRecien.RowHeadersWidth = 62
         Me.dataCompraRecien.RowTemplate.Height = 24
         Me.dataCompraRecien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dataCompraRecien.Size = New System.Drawing.Size(1019, 648)
+        Me.dataCompraRecien.Size = New System.Drawing.Size(677, 416)
         Me.dataCompraRecien.TabIndex = 40
         '
         'CompraID
@@ -211,41 +211,43 @@ Partial Class Form_Compras
         Me.panelConfirmar.Controls.Add(Me.Panel2)
         Me.panelConfirmar.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.panelConfirmar.Enabled = False
-        Me.panelConfirmar.Location = New System.Drawing.Point(0, 648)
-        Me.panelConfirmar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.panelConfirmar.Location = New System.Drawing.Point(0, 416)
+        Me.panelConfirmar.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.panelConfirmar.Name = "panelConfirmar"
-        Me.panelConfirmar.Size = New System.Drawing.Size(1019, 109)
+        Me.panelConfirmar.Size = New System.Drawing.Size(677, 71)
         Me.panelConfirmar.TabIndex = 39
         '
         'Panel7
         '
+        Me.Panel7.BackColor = System.Drawing.Color.LightSkyBlue
         Me.Panel7.Controls.Add(Me.Label12)
         Me.Panel7.Controls.Add(Me.Button1)
         Me.Panel7.Controls.Add(Me.txtTotalVenta)
         Me.Panel7.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel7.Location = New System.Drawing.Point(0, 0)
-        Me.Panel7.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Panel7.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(515, 109)
+        Me.Panel7.Size = New System.Drawing.Size(341, 71)
         Me.Panel7.TabIndex = 44
         '
         'Label12
         '
         Me.Label12.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(39, 14)
+        Me.Label12.Location = New System.Drawing.Point(25, 9)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(187, 20)
+        Me.Label12.Size = New System.Drawing.Size(128, 13)
         Me.Label12.TabIndex = 40
         Me.Label12.Text = "TOTAL DE LA COMPRA:"
         '
         'Button1
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Location = New System.Drawing.Point(43, 48)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button1.Location = New System.Drawing.Point(28, 31)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(412, 55)
+        Me.Button1.Size = New System.Drawing.Size(275, 36)
         Me.Button1.TabIndex = 38
         Me.Button1.TabStop = False
         Me.Button1.Text = "Guardar Pedido"
@@ -254,11 +256,11 @@ Partial Class Form_Compras
         'txtTotalVenta
         '
         Me.txtTotalVenta.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.txtTotalVenta.Location = New System.Drawing.Point(232, 10)
-        Me.txtTotalVenta.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtTotalVenta.Location = New System.Drawing.Point(154, 6)
+        Me.txtTotalVenta.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.txtTotalVenta.Name = "txtTotalVenta"
         Me.txtTotalVenta.ReadOnly = True
-        Me.txtTotalVenta.Size = New System.Drawing.Size(219, 26)
+        Me.txtTotalVenta.Size = New System.Drawing.Size(147, 20)
         Me.txtTotalVenta.TabIndex = 41
         Me.txtTotalVenta.TabStop = False
         Me.txtTotalVenta.Text = "0"
@@ -266,13 +268,14 @@ Partial Class Form_Compras
         '
         'Panel2
         '
+        Me.Panel2.BackColor = System.Drawing.Color.LightSkyBlue
         Me.Panel2.Controls.Add(Me.Label13)
         Me.Panel2.Controls.Add(Me.btn_EvniarCompra)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel2.Location = New System.Drawing.Point(515, 0)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Panel2.Location = New System.Drawing.Point(341, 0)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(504, 109)
+        Me.Panel2.Size = New System.Drawing.Size(336, 71)
         Me.Panel2.TabIndex = 43
         '
         'Label13
@@ -280,19 +283,20 @@ Partial Class Form_Compras
         Me.Label13.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft YaHei", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(57, 10)
+        Me.Label13.Location = New System.Drawing.Point(38, 6)
+        Me.Label13.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(388, 30)
+        Me.Label13.Size = New System.Drawing.Size(268, 20)
         Me.Label13.TabIndex = 42
         Me.Label13.Text = "Puede enviar su pedido desde aqui:"
         '
         'btn_EvniarCompra
         '
         Me.btn_EvniarCompra.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.btn_EvniarCompra.Location = New System.Drawing.Point(63, 48)
-        Me.btn_EvniarCompra.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btn_EvniarCompra.Location = New System.Drawing.Point(42, 31)
+        Me.btn_EvniarCompra.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.btn_EvniarCompra.Name = "btn_EvniarCompra"
-        Me.btn_EvniarCompra.Size = New System.Drawing.Size(378, 55)
+        Me.btn_EvniarCompra.Size = New System.Drawing.Size(252, 36)
         Me.btn_EvniarCompra.TabIndex = 37
         Me.btn_EvniarCompra.TabStop = False
         Me.btn_EvniarCompra.Text = "Enviar pedido al proveedor..."
@@ -304,14 +308,15 @@ Partial Class Form_Compras
         Me.Panel3.Controls.Add(Me.panelDetallesCompra)
         Me.Panel3.Controls.Add(Me.Panel6)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel3.Location = New System.Drawing.Point(3, 4)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Panel3.Location = New System.Drawing.Point(2, 3)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(452, 757)
+        Me.Panel3.Size = New System.Drawing.Size(301, 487)
         Me.Panel3.TabIndex = 4
         '
         'PanelDetalles
         '
+        Me.PanelDetalles.BackColor = System.Drawing.Color.SteelBlue
         Me.PanelDetalles.Controls.Add(Me.eliminar)
         Me.PanelDetalles.Controls.Add(Me.Label9)
         Me.PanelDetalles.Controls.Add(Me.btn_AddLista)
@@ -334,18 +339,18 @@ Partial Class Form_Compras
         Me.PanelDetalles.Controls.Add(Me.txt_nombreProd)
         Me.PanelDetalles.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelDetalles.Enabled = False
-        Me.PanelDetalles.Location = New System.Drawing.Point(0, 179)
-        Me.PanelDetalles.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.PanelDetalles.Location = New System.Drawing.Point(0, 116)
+        Me.PanelDetalles.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.PanelDetalles.Name = "PanelDetalles"
-        Me.PanelDetalles.Size = New System.Drawing.Size(452, 489)
+        Me.PanelDetalles.Size = New System.Drawing.Size(301, 313)
         Me.PanelDetalles.TabIndex = 44
         '
         'eliminar
         '
-        Me.eliminar.Location = New System.Drawing.Point(200, 326)
-        Me.eliminar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.eliminar.Location = New System.Drawing.Point(133, 212)
+        Me.eliminar.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.eliminar.Name = "eliminar"
-        Me.eliminar.Size = New System.Drawing.Size(217, 62)
+        Me.eliminar.Size = New System.Drawing.Size(145, 40)
         Me.eliminar.TabIndex = 43
         Me.eliminar.TabStop = False
         Me.eliminar.Text = "Eliminar del listado"
@@ -355,18 +360,19 @@ Partial Class Form_Compras
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft YaHei", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(3, 16)
+        Me.Label9.Location = New System.Drawing.Point(2, 10)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(246, 30)
+        Me.Label9.Size = New System.Drawing.Size(170, 20)
         Me.Label9.TabIndex = 32
         Me.Label9.Text = "Detalles de la compra:"
         '
         'btn_AddLista
         '
-        Me.btn_AddLista.Location = New System.Drawing.Point(3, 408)
-        Me.btn_AddLista.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btn_AddLista.Location = New System.Drawing.Point(2, 265)
+        Me.btn_AddLista.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.btn_AddLista.Name = "btn_AddLista"
-        Me.btn_AddLista.Size = New System.Drawing.Size(440, 71)
+        Me.btn_AddLista.Size = New System.Drawing.Size(293, 46)
         Me.btn_AddLista.TabIndex = 5
         Me.btn_AddLista.Text = "Agregar producto a la lista"
         Me.btn_AddLista.UseVisualStyleBackColor = True
@@ -374,78 +380,83 @@ Partial Class Form_Compras
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(212, 162)
+        Me.Label4.Location = New System.Drawing.Point(141, 105)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(96, 20)
+        Me.Label4.Size = New System.Drawing.Size(67, 13)
         Me.Label4.TabIndex = 31
         Me.Label4.Text = "Precio Total:"
         '
         'txt_prodId
         '
-        Me.txt_prodId.Location = New System.Drawing.Point(92, 111)
-        Me.txt_prodId.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txt_prodId.Location = New System.Drawing.Point(225, 14)
+        Me.txt_prodId.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.txt_prodId.Name = "txt_prodId"
         Me.txt_prodId.ReadOnly = True
-        Me.txt_prodId.Size = New System.Drawing.Size(112, 26)
+        Me.txt_prodId.Size = New System.Drawing.Size(76, 20)
         Me.txt_prodId.TabIndex = 24
         Me.txt_prodId.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.txt_prodId.Visible = False
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(8, 209)
+        Me.Label10.Location = New System.Drawing.Point(5, 136)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(159, 20)
+        Me.Label10.Size = New System.Drawing.Size(107, 13)
         Me.Label10.TabIndex = 33
         Me.Label10.Text = "Imagen del producto:"
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(212, 209)
+        Me.Label11.Location = New System.Drawing.Point(141, 136)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(139, 20)
+        Me.Label11.Size = New System.Drawing.Size(94, 13)
         Me.Label11.TabIndex = 41
         Me.Label11.Text = "Codigo del detalle:"
         Me.Label11.Visible = False
         '
         'txt_preciototal
         '
-        Me.txt_preciototal.Location = New System.Drawing.Point(336, 159)
-        Me.txt_preciototal.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txt_preciototal.Location = New System.Drawing.Point(224, 103)
+        Me.txt_preciototal.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.txt_preciototal.Name = "txt_preciototal"
         Me.txt_preciototal.ReadOnly = True
-        Me.txt_preciototal.Size = New System.Drawing.Size(109, 26)
+        Me.txt_preciototal.Size = New System.Drawing.Size(74, 20)
         Me.txt_preciototal.TabIndex = 30
         Me.txt_preciototal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(212, 115)
+        Me.Label6.Location = New System.Drawing.Point(141, 75)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(116, 20)
+        Me.Label6.Size = New System.Drawing.Size(79, 13)
         Me.Label6.TabIndex = 23
         Me.Label6.Text = "Precio Unitario:"
         '
         'pb_Prodimg
         '
         Me.pb_Prodimg.ErrorImage = Nothing
-        Me.pb_Prodimg.Location = New System.Drawing.Point(11, 246)
-        Me.pb_Prodimg.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.pb_Prodimg.Location = New System.Drawing.Point(7, 160)
+        Me.pb_Prodimg.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.pb_Prodimg.Name = "pb_Prodimg"
-        Me.pb_Prodimg.Size = New System.Drawing.Size(156, 154)
+        Me.pb_Prodimg.Size = New System.Drawing.Size(104, 100)
         Me.pb_Prodimg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pb_Prodimg.TabIndex = 34
         Me.pb_Prodimg.TabStop = False
         '
         'CodigoDetalle
         '
-        Me.CodigoDetalle.Location = New System.Drawing.Point(359, 205)
-        Me.CodigoDetalle.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.CodigoDetalle.Location = New System.Drawing.Point(239, 133)
+        Me.CodigoDetalle.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.CodigoDetalle.Name = "CodigoDetalle"
         Me.CodigoDetalle.ReadOnly = True
-        Me.CodigoDetalle.Size = New System.Drawing.Size(86, 26)
+        Me.CodigoDetalle.Size = New System.Drawing.Size(59, 20)
         Me.CodigoDetalle.TabIndex = 40
         Me.CodigoDetalle.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.CodigoDetalle.Visible = False
@@ -453,27 +464,30 @@ Partial Class Form_Compras
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(8, 72)
+        Me.Label7.Location = New System.Drawing.Point(5, 47)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(77, 20)
+        Me.Label7.Size = New System.Drawing.Size(53, 13)
         Me.Label7.TabIndex = 25
         Me.Label7.Text = "Producto:"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(8, 111)
+        Me.Label8.Location = New System.Drawing.Point(178, 21)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(63, 20)
+        Me.Label8.Size = New System.Drawing.Size(43, 13)
         Me.Label8.TabIndex = 26
         Me.Label8.Text = "Codigo:"
+        Me.Label8.Visible = False
         '
         'buscarProd_btn
         '
-        Me.buscarProd_btn.Location = New System.Drawing.Point(381, 68)
-        Me.buscarProd_btn.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.buscarProd_btn.Location = New System.Drawing.Point(254, 44)
+        Me.buscarProd_btn.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.buscarProd_btn.Name = "buscarProd_btn"
-        Me.buscarProd_btn.Size = New System.Drawing.Size(64, 36)
+        Me.buscarProd_btn.Size = New System.Drawing.Size(43, 23)
         Me.buscarProd_btn.TabIndex = 28
         Me.buscarProd_btn.Text = "..."
         Me.buscarProd_btn.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -481,10 +495,10 @@ Partial Class Form_Compras
         '
         'btnCancelEdit
         '
-        Me.btnCancelEdit.Location = New System.Drawing.Point(317, 246)
-        Me.btnCancelEdit.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnCancelEdit.Location = New System.Drawing.Point(211, 160)
+        Me.btnCancelEdit.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.btnCancelEdit.Name = "btnCancelEdit"
-        Me.btnCancelEdit.Size = New System.Drawing.Size(126, 60)
+        Me.btnCancelEdit.Size = New System.Drawing.Size(84, 39)
         Me.btnCancelEdit.TabIndex = 39
         Me.btnCancelEdit.Text = "Cancelar Edicion"
         Me.btnCancelEdit.UseVisualStyleBackColor = True
@@ -493,37 +507,38 @@ Partial Class Form_Compras
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(8, 159)
+        Me.Label5.Location = New System.Drawing.Point(5, 103)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(77, 20)
+        Me.Label5.Size = New System.Drawing.Size(52, 13)
         Me.Label5.TabIndex = 21
         Me.Label5.Text = "Cantidad:"
         '
         'txt_precioUnidad
         '
-        Me.txt_precioUnidad.Location = New System.Drawing.Point(336, 111)
-        Me.txt_precioUnidad.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txt_precioUnidad.Location = New System.Drawing.Point(224, 72)
+        Me.txt_precioUnidad.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.txt_precioUnidad.Name = "txt_precioUnidad"
         Me.txt_precioUnidad.ReadOnly = True
-        Me.txt_precioUnidad.Size = New System.Drawing.Size(109, 26)
+        Me.txt_precioUnidad.Size = New System.Drawing.Size(74, 20)
         Me.txt_precioUnidad.TabIndex = 22
         Me.txt_precioUnidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'txtCantidad
         '
-        Me.txtCantidad.Location = New System.Drawing.Point(91, 159)
-        Me.txtCantidad.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtCantidad.Location = New System.Drawing.Point(61, 103)
+        Me.txtCantidad.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.txtCantidad.Name = "txtCantidad"
-        Me.txtCantidad.Size = New System.Drawing.Size(113, 26)
+        Me.txtCantidad.Size = New System.Drawing.Size(77, 20)
         Me.txtCantidad.TabIndex = 1
         Me.txtCantidad.Text = "0"
         '
         'btnEdit
         '
-        Me.btnEdit.Location = New System.Drawing.Point(184, 246)
-        Me.btnEdit.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnEdit.Location = New System.Drawing.Point(123, 160)
+        Me.btnEdit.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.btnEdit.Name = "btnEdit"
-        Me.btnEdit.Size = New System.Drawing.Size(126, 60)
+        Me.btnEdit.Size = New System.Drawing.Size(84, 39)
         Me.btnEdit.TabIndex = 38
         Me.btnEdit.Text = "Aplicar cambios"
         Me.btnEdit.UseVisualStyleBackColor = True
@@ -531,11 +546,11 @@ Partial Class Form_Compras
         '
         'txt_nombreProd
         '
-        Me.txt_nombreProd.Location = New System.Drawing.Point(92, 69)
-        Me.txt_nombreProd.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txt_nombreProd.Location = New System.Drawing.Point(61, 45)
+        Me.txt_nombreProd.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.txt_nombreProd.Name = "txt_nombreProd"
         Me.txt_nombreProd.ReadOnly = True
-        Me.txt_nombreProd.Size = New System.Drawing.Size(282, 26)
+        Me.txt_nombreProd.Size = New System.Drawing.Size(189, 20)
         Me.txt_nombreProd.TabIndex = 27
         '
         'panelDetallesCompra
@@ -543,18 +558,18 @@ Partial Class Form_Compras
         Me.panelDetallesCompra.Controls.Add(Me.Button2)
         Me.panelDetallesCompra.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.panelDetallesCompra.Enabled = False
-        Me.panelDetallesCompra.Location = New System.Drawing.Point(0, 668)
-        Me.panelDetallesCompra.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.panelDetallesCompra.Location = New System.Drawing.Point(0, 429)
+        Me.panelDetallesCompra.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.panelDetallesCompra.Name = "panelDetallesCompra"
-        Me.panelDetallesCompra.Size = New System.Drawing.Size(452, 89)
+        Me.panelDetallesCompra.Size = New System.Drawing.Size(301, 58)
         Me.panelDetallesCompra.TabIndex = 43
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(3, 14)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button2.Location = New System.Drawing.Point(2, 9)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(440, 62)
+        Me.Button2.Size = New System.Drawing.Size(293, 40)
         Me.Button2.TabIndex = 42
         Me.Button2.TabStop = False
         Me.Button2.Text = "Cancelar Pedido"
@@ -562,6 +577,7 @@ Partial Class Form_Compras
         '
         'Panel6
         '
+        Me.Panel6.BackColor = System.Drawing.Color.SteelBlue
         Me.Panel6.Controls.Add(Me.Label2)
         Me.Panel6.Controls.Add(Me.btn_pedido)
         Me.Panel6.Controls.Add(Me.Label1)
@@ -571,26 +587,27 @@ Partial Class Form_Compras
         Me.Panel6.Controls.Add(Me.txt_id)
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel6.Location = New System.Drawing.Point(0, 0)
-        Me.Panel6.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Panel6.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(452, 179)
+        Me.Panel6.Size = New System.Drawing.Size(301, 116)
         Me.Panel6.TabIndex = 42
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(258, 19)
+        Me.Label2.Location = New System.Drawing.Point(172, 12)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(62, 20)
+        Me.Label2.Size = New System.Drawing.Size(43, 13)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Fecha: "
         '
         'btn_pedido
         '
-        Me.btn_pedido.Location = New System.Drawing.Point(11, 118)
-        Me.btn_pedido.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btn_pedido.Location = New System.Drawing.Point(7, 77)
+        Me.btn_pedido.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.btn_pedido.Name = "btn_pedido"
-        Me.btn_pedido.Size = New System.Drawing.Size(432, 42)
+        Me.btn_pedido.Size = New System.Drawing.Size(288, 27)
         Me.btn_pedido.TabIndex = 0
         Me.btn_pedido.Text = "Nuevo Pedido"
         Me.btn_pedido.UseVisualStyleBackColor = True
@@ -598,9 +615,10 @@ Partial Class Form_Compras
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(11, 55)
+        Me.Label1.Location = New System.Drawing.Point(7, 36)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(360, 20)
+        Me.Label1.Size = New System.Drawing.Size(244, 13)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Seleccione un proveedor para solicitar productos: "
         '
@@ -608,47 +626,51 @@ Partial Class Form_Compras
         '
         Me.cmb_Prove.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmb_Prove.FormattingEnabled = True
-        Me.cmb_Prove.Location = New System.Drawing.Point(11, 80)
-        Me.cmb_Prove.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.cmb_Prove.Location = New System.Drawing.Point(7, 52)
+        Me.cmb_Prove.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.cmb_Prove.Name = "cmb_Prove"
-        Me.cmb_Prove.Size = New System.Drawing.Size(432, 28)
+        Me.cmb_Prove.Size = New System.Drawing.Size(289, 21)
         Me.cmb_Prove.TabIndex = 1
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(326, 19)
+        Me.Label3.Location = New System.Drawing.Point(217, 12)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(0, 20)
+        Me.Label3.Size = New System.Drawing.Size(0, 13)
         Me.Label3.TabIndex = 4
         '
         'labelee
         '
-        Me.labelee.Location = New System.Drawing.Point(11, 19)
+        Me.labelee.Location = New System.Drawing.Point(7, 12)
+        Me.labelee.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.labelee.Name = "labelee"
-        Me.labelee.Size = New System.Drawing.Size(150, 21)
+        Me.labelee.Size = New System.Drawing.Size(100, 14)
         Me.labelee.TabIndex = 35
         Me.labelee.Text = "Codigo de Compra:"
+        Me.labelee.Visible = False
         '
         'txt_id
         '
-        Me.txt_id.Location = New System.Drawing.Point(168, 15)
-        Me.txt_id.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txt_id.Location = New System.Drawing.Point(112, 10)
+        Me.txt_id.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.txt_id.Name = "txt_id"
         Me.txt_id.ReadOnly = True
-        Me.txt_id.Size = New System.Drawing.Size(64, 26)
+        Me.txt_id.Size = New System.Drawing.Size(44, 20)
         Me.txt_id.TabIndex = 36
         Me.txt_id.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.txt_id.Visible = False
         '
         'pedidos
         '
         Me.pedidos.Controls.Add(Me.dataEstadoPedido)
         Me.pedidos.Controls.Add(Me.Panel5)
-        Me.pedidos.Location = New System.Drawing.Point(4, 29)
-        Me.pedidos.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.pedidos.Location = New System.Drawing.Point(4, 22)
+        Me.pedidos.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.pedidos.Name = "pedidos"
-        Me.pedidos.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.pedidos.Size = New System.Drawing.Size(1477, 765)
+        Me.pedidos.Padding = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.pedidos.Size = New System.Drawing.Size(982, 493)
         Me.pedidos.TabIndex = 1
         Me.pedidos.Text = "Listado de Pedidos"
         Me.pedidos.UseVisualStyleBackColor = True
@@ -659,14 +681,14 @@ Partial Class Form_Compras
         Me.dataEstadoPedido.AllowUserToDeleteRows = False
         Me.dataEstadoPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dataEstadoPedido.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dataEstadoPedido.Location = New System.Drawing.Point(3, 4)
-        Me.dataEstadoPedido.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.dataEstadoPedido.Location = New System.Drawing.Point(2, 3)
+        Me.dataEstadoPedido.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.dataEstadoPedido.Name = "dataEstadoPedido"
         Me.dataEstadoPedido.ReadOnly = True
         Me.dataEstadoPedido.RowHeadersWidth = 62
         Me.dataEstadoPedido.RowTemplate.Height = 24
         Me.dataEstadoPedido.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dataEstadoPedido.Size = New System.Drawing.Size(1307, 757)
+        Me.dataEstadoPedido.Size = New System.Drawing.Size(869, 487)
         Me.dataEstadoPedido.TabIndex = 4
         '
         'Panel5
@@ -674,28 +696,28 @@ Partial Class Form_Compras
         Me.Panel5.Controls.Add(Me.btn_Confirmar)
         Me.Panel5.Controls.Add(Me.btn_Cancelar)
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel5.Location = New System.Drawing.Point(1310, 4)
-        Me.Panel5.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Panel5.Location = New System.Drawing.Point(871, 3)
+        Me.Panel5.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(164, 757)
+        Me.Panel5.Size = New System.Drawing.Size(109, 487)
         Me.Panel5.TabIndex = 3
         '
         'btn_Confirmar
         '
-        Me.btn_Confirmar.Location = New System.Drawing.Point(10, 155)
-        Me.btn_Confirmar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btn_Confirmar.Location = New System.Drawing.Point(7, 101)
+        Me.btn_Confirmar.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.btn_Confirmar.Name = "btn_Confirmar"
-        Me.btn_Confirmar.Size = New System.Drawing.Size(148, 120)
+        Me.btn_Confirmar.Size = New System.Drawing.Size(99, 78)
         Me.btn_Confirmar.TabIndex = 1
         Me.btn_Confirmar.Text = "Confirmar Pedido"
         Me.btn_Confirmar.UseVisualStyleBackColor = True
         '
         'btn_Cancelar
         '
-        Me.btn_Cancelar.Location = New System.Drawing.Point(10, 440)
-        Me.btn_Cancelar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btn_Cancelar.Location = New System.Drawing.Point(7, 286)
+        Me.btn_Cancelar.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.btn_Cancelar.Name = "btn_Cancelar"
-        Me.btn_Cancelar.Size = New System.Drawing.Size(148, 119)
+        Me.btn_Cancelar.Size = New System.Drawing.Size(99, 77)
         Me.btn_Cancelar.TabIndex = 2
         Me.btn_Cancelar.Text = "Cancelar Pedido"
         Me.btn_Cancelar.UseVisualStyleBackColor = True
@@ -703,10 +725,10 @@ Partial Class Form_Compras
         'historial
         '
         Me.historial.Controls.Add(Me.dataCompraHistorial)
-        Me.historial.Location = New System.Drawing.Point(4, 29)
-        Me.historial.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.historial.Location = New System.Drawing.Point(4, 22)
+        Me.historial.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.historial.Name = "historial"
-        Me.historial.Size = New System.Drawing.Size(1477, 765)
+        Me.historial.Size = New System.Drawing.Size(982, 493)
         Me.historial.TabIndex = 2
         Me.historial.Text = "Historial de Compras"
         Me.historial.UseVisualStyleBackColor = True
@@ -718,13 +740,13 @@ Partial Class Form_Compras
         Me.dataCompraHistorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dataCompraHistorial.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dataCompraHistorial.Location = New System.Drawing.Point(0, 0)
-        Me.dataCompraHistorial.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.dataCompraHistorial.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.dataCompraHistorial.Name = "dataCompraHistorial"
         Me.dataCompraHistorial.ReadOnly = True
         Me.dataCompraHistorial.RowHeadersWidth = 62
         Me.dataCompraHistorial.RowTemplate.Height = 24
         Me.dataCompraHistorial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dataCompraHistorial.Size = New System.Drawing.Size(1477, 765)
+        Me.dataCompraHistorial.Size = New System.Drawing.Size(982, 493)
         Me.dataCompraHistorial.TabIndex = 0
         '
         'Panel1
@@ -732,18 +754,18 @@ Partial Class Form_Compras
         Me.Panel1.Controls.Add(Me.TabControl1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1485, 798)
+        Me.Panel1.Size = New System.Drawing.Size(990, 519)
         Me.Panel1.TabIndex = 1
         '
         'Form_Compras
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1485, 798)
+        Me.ClientSize = New System.Drawing.Size(990, 519)
         Me.Controls.Add(Me.Panel1)
-        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.Name = "Form_Compras"
         Me.Text = "Form_Compras"
         Me.TabControl1.ResumeLayout(False)

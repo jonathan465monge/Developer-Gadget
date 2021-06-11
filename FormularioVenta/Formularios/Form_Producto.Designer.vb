@@ -96,7 +96,7 @@ Partial Class Form_Producto
         Me.panelBuscarProduct.Controls.Add(Me.cbocampo)
         Me.panelBuscarProduct.Dock = System.Windows.Forms.DockStyle.Top
         Me.panelBuscarProduct.Location = New System.Drawing.Point(2, 15)
-        Me.panelBuscarProduct.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.panelBuscarProduct.Margin = New System.Windows.Forms.Padding(2)
         Me.panelBuscarProduct.Name = "panelBuscarProduct"
         Me.panelBuscarProduct.Size = New System.Drawing.Size(994, 38)
         Me.panelBuscarProduct.TabIndex = 25
@@ -105,12 +105,13 @@ Partial Class Form_Producto
         '
         Me.btn_desact.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btn_desact.BackColor = System.Drawing.SystemColors.Highlight
         Me.btn_desact.Location = New System.Drawing.Point(910, 3)
         Me.btn_desact.Name = "btn_desact"
         Me.btn_desact.Size = New System.Drawing.Size(81, 32)
         Me.btn_desact.TabIndex = 32
         Me.btn_desact.Text = "Desactivar"
-        Me.btn_desact.UseVisualStyleBackColor = True
+        Me.btn_desact.UseVisualStyleBackColor = False
         Me.btn_desact.Visible = False
         '
         'btn_Activar
@@ -128,6 +129,7 @@ Partial Class Form_Producto
         'Label8
         '
         Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.SystemColors.Window
         Me.Label8.Location = New System.Drawing.Point(3, 12)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(61, 13)
@@ -173,7 +175,7 @@ Partial Class Form_Producto
         Me.panelBajoProd.Controls.Add(Me.labelFlag)
         Me.panelBajoProd.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.panelBajoProd.Location = New System.Drawing.Point(0, 489)
-        Me.panelBajoProd.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.panelBajoProd.Margin = New System.Windows.Forms.Padding(2)
         Me.panelBajoProd.Name = "panelBajoProd"
         Me.panelBajoProd.Size = New System.Drawing.Size(998, 53)
         Me.panelBajoProd.TabIndex = 9
@@ -181,15 +183,19 @@ Partial Class Form_Producto
         'Button1
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.Button1.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button1.Location = New System.Drawing.Point(357, 20)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 34
         Me.Button1.Text = "Refresh"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'txtEstad
         '
+        Me.txtEstad.BackColor = System.Drawing.SystemColors.AppWorkspace
         Me.txtEstad.Location = New System.Drawing.Point(894, 32)
         Me.txtEstad.Name = "txtEstad"
         Me.txtEstad.ReadOnly = True
@@ -204,9 +210,9 @@ Partial Class Form_Producto
         Me.GroupBox1.Controls.Add(Me.panelBuscarProduct)
         Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Size = New System.Drawing.Size(998, 489)
         Me.GroupBox1.TabIndex = 10
         Me.GroupBox1.TabStop = False
@@ -219,7 +225,7 @@ Partial Class Form_Producto
         Me.dataproductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dataproductos.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dataproductos.Location = New System.Drawing.Point(2, 53)
-        Me.dataproductos.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dataproductos.Margin = New System.Windows.Forms.Padding(2)
         Me.dataproductos.Name = "dataproductos"
         Me.dataproductos.ReadOnly = True
         Me.dataproductos.RowHeadersVisible = False
@@ -232,10 +238,11 @@ Partial Class Form_Producto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(998, 542)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.panelBajoProd)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Form_Producto"
         Me.Text = "Prod"
         Me.panelBuscarProduct.ResumeLayout(False)

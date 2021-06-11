@@ -44,7 +44,7 @@ Partial Class Form_Login
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(247, 284)
         Me.Panel1.TabIndex = 0
@@ -53,7 +53,7 @@ Partial Class Form_Login
         '
         Me.PictureBox1.Image = Global.SistemaDeVentas.My.Resources.Resources.WhatsApp_Image_2021_06_11_at_10_44_39
         Me.PictureBox1.Location = New System.Drawing.Point(33, 59)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(168, 171)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -79,7 +79,7 @@ Partial Class Form_Login
         Me.txt_Usuario.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Usuario.ForeColor = System.Drawing.Color.DimGray
         Me.txt_Usuario.Location = New System.Drawing.Point(308, 82)
-        Me.txt_Usuario.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txt_Usuario.Margin = New System.Windows.Forms.Padding(2)
         Me.txt_Usuario.Name = "txt_Usuario"
         Me.txt_Usuario.Size = New System.Drawing.Size(323, 25)
         Me.txt_Usuario.TabIndex = 1
@@ -92,7 +92,7 @@ Partial Class Form_Login
         Me.txt_Pass.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Pass.ForeColor = System.Drawing.Color.DimGray
         Me.txt_Pass.Location = New System.Drawing.Point(308, 141)
-        Me.txt_Pass.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txt_Pass.Margin = New System.Windows.Forms.Padding(2)
         Me.txt_Pass.Name = "txt_Pass"
         Me.txt_Pass.Size = New System.Drawing.Size(323, 25)
         Me.txt_Pass.TabIndex = 2
@@ -102,7 +102,7 @@ Partial Class Form_Login
         '
         Me.Button1.ForeColor = System.Drawing.Color.Black
         Me.Button1.Location = New System.Drawing.Point(386, 199)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(177, 32)
         Me.Button1.TabIndex = 3
@@ -139,7 +139,7 @@ Partial Class Form_Login
         '
         Me.btn_MInimizar.Image = Global.SistemaDeVentas.My.Resources.Resources.iconfinder_icon_minus_round_211863
         Me.btn_MInimizar.Location = New System.Drawing.Point(631, 10)
-        Me.btn_MInimizar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btn_MInimizar.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_MInimizar.Name = "btn_MInimizar"
         Me.btn_MInimizar.Size = New System.Drawing.Size(31, 26)
         Me.btn_MInimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -150,7 +150,7 @@ Partial Class Form_Login
         '
         Me.btn_Cerrar.Image = Global.SistemaDeVentas.My.Resources.Resources.iconfinder_No_984759
         Me.btn_Cerrar.Location = New System.Drawing.Point(666, 10)
-        Me.btn_Cerrar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btn_Cerrar.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_Cerrar.Name = "btn_Cerrar"
         Me.btn_Cerrar.Size = New System.Drawing.Size(28, 26)
         Me.btn_Cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -161,7 +161,7 @@ Partial Class Form_Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.LemonChiffon
+        Me.BackColor = System.Drawing.Color.LightSkyBlue
         Me.ClientSize = New System.Drawing.Size(702, 284)
         Me.Controls.Add(Me.lbl_PassInc)
         Me.Controls.Add(Me.lbl_UserInc)
@@ -174,7 +174,7 @@ Partial Class Form_Login
         Me.Controls.Add(Me.Panel1)
         Me.ForeColor = System.Drawing.Color.Red
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Form_Login"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form_Login"

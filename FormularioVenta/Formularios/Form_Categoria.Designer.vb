@@ -22,6 +22,7 @@ Partial Class Form_Categoria
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.btn_Activ = New System.Windows.Forms.Button()
         Me.cbocampo = New System.Windows.Forms.ComboBox()
         Me.Inexistente = New System.Windows.Forms.LinkLabel()
@@ -59,10 +60,9 @@ Partial Class Form_Categoria
         'btn_Activ
         '
         Me.btn_Activ.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btn_Activ.Location = New System.Drawing.Point(827, 13)
-        Me.btn_Activ.Margin = New System.Windows.Forms.Padding(4)
+        Me.btn_Activ.Location = New System.Drawing.Point(620, 11)
         Me.btn_Activ.Name = "btn_Activ"
-        Me.btn_Activ.Size = New System.Drawing.Size(100, 28)
+        Me.btn_Activ.Size = New System.Drawing.Size(75, 23)
         Me.btn_Activ.TabIndex = 13
         Me.btn_Activ.Text = "Activar"
         Me.btn_Activ.UseVisualStyleBackColor = True
@@ -72,10 +72,9 @@ Partial Class Form_Categoria
         Me.cbocampo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbocampo.FormattingEnabled = True
         Me.cbocampo.Items.AddRange(New Object() {"Nombre", "EstadoCategoria"})
-        Me.cbocampo.Location = New System.Drawing.Point(125, 17)
-        Me.cbocampo.Margin = New System.Windows.Forms.Padding(4)
+        Me.cbocampo.Location = New System.Drawing.Point(94, 14)
         Me.cbocampo.Name = "cbocampo"
-        Me.cbocampo.Size = New System.Drawing.Size(177, 24)
+        Me.cbocampo.Size = New System.Drawing.Size(134, 21)
         Me.cbocampo.TabIndex = 12
         '
         'Inexistente
@@ -84,10 +83,9 @@ Partial Class Form_Categoria
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Inexistente.AutoSize = True
-        Me.Inexistente.Location = New System.Drawing.Point(380, 352)
-        Me.Inexistente.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Inexistente.Location = New System.Drawing.Point(285, 286)
         Me.Inexistente.Name = "Inexistente"
-        Me.Inexistente.Size = New System.Drawing.Size(123, 17)
+        Me.Inexistente.Size = New System.Drawing.Size(94, 13)
         Me.Inexistente.TabIndex = 10
         Me.Inexistente.TabStop = True
         Me.Inexistente.Text = "Datos Inexistentes"
@@ -95,19 +93,17 @@ Partial Class Form_Categoria
         '
         'txtbuscar
         '
-        Me.txtbuscar.Location = New System.Drawing.Point(310, 17)
-        Me.txtbuscar.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtbuscar.Location = New System.Drawing.Point(232, 14)
         Me.txtbuscar.Name = "txtbuscar"
-        Me.txtbuscar.Size = New System.Drawing.Size(249, 22)
+        Me.txtbuscar.Size = New System.Drawing.Size(188, 20)
         Me.txtbuscar.TabIndex = 9
         '
         'btn_Desact
         '
         Me.btn_Desact.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btn_Desact.Location = New System.Drawing.Point(827, 13)
-        Me.btn_Desact.Margin = New System.Windows.Forms.Padding(4)
+        Me.btn_Desact.Location = New System.Drawing.Point(620, 11)
         Me.btn_Desact.Name = "btn_Desact"
-        Me.btn_Desact.Size = New System.Drawing.Size(100, 28)
+        Me.btn_Desact.Size = New System.Drawing.Size(75, 23)
         Me.btn_Desact.TabIndex = 8
         Me.btn_Desact.Text = "Desactivar"
         Me.btn_Desact.UseVisualStyleBackColor = True
@@ -116,16 +112,21 @@ Partial Class Form_Categoria
         '
         Me.datalistado.AllowUserToAddRows = False
         Me.datalistado.AllowUserToDeleteRows = False
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.LightSkyBlue
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Palatino Linotype", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.LightSkyBlue
+        Me.datalistado.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
         Me.datalistado.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.datalistado.BackgroundColor = System.Drawing.SystemColors.Highlight
         Me.datalistado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.datalistado.Location = New System.Drawing.Point(3, 78)
-        Me.datalistado.Margin = New System.Windows.Forms.Padding(4)
+        Me.datalistado.Location = New System.Drawing.Point(2, 63)
         Me.datalistado.Name = "datalistado"
         Me.datalistado.ReadOnly = True
         Me.datalistado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.datalistado.Size = New System.Drawing.Size(937, 535)
+        Me.datalistado.Size = New System.Drawing.Size(703, 435)
         Me.datalistado.TabIndex = 0
         '
         'GroupBox1
@@ -133,16 +134,15 @@ Partial Class Form_Categoria
         Me.GroupBox1.Controls.Add(Me.Panel3)
         Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Left
         Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox1.Size = New System.Drawing.Size(365, 617)
+        Me.GroupBox1.Size = New System.Drawing.Size(274, 501)
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "MANTENIMIENTO DE CATEGORIAS"
         '
         'Panel3
         '
+        Me.Panel3.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel3.Controls.Add(Me.Label1)
         Me.Panel3.Controls.Add(Me.PictureBox1)
         Me.Panel3.Controls.Add(Me.txtcategoriaid)
@@ -155,9 +155,10 @@ Partial Class Form_Categoria
         Me.Panel3.Controls.Add(Me.btneditar)
         Me.Panel3.Controls.Add(Me.btncancelar)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel3.Location = New System.Drawing.Point(4, 19)
+        Me.Panel3.Location = New System.Drawing.Point(3, 16)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(357, 594)
+        Me.Panel3.Size = New System.Drawing.Size(268, 482)
         Me.Panel3.TabIndex = 13
         '
         'Label1
@@ -165,19 +166,21 @@ Partial Class Form_Categoria
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(9, 165)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(7, 134)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(237, 23)
+        Me.Label1.Size = New System.Drawing.Size(196, 20)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Codigo de la Categoria (ID):"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Label1.Visible = False
         '
         'PictureBox1
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(15, 13)
+        Me.PictureBox1.Image = Global.SistemaDeVentas.My.Resources.Resources.WhatsApp_Image_2021_06_11_at_10_44_39
+        Me.PictureBox1.Location = New System.Drawing.Point(11, 11)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(120, 120)
+        Me.PictureBox1.Size = New System.Drawing.Size(90, 98)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 12
         Me.PictureBox1.TabStop = False
@@ -185,106 +188,105 @@ Partial Class Form_Categoria
         'txtcategoriaid
         '
         Me.txtcategoriaid.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtcategoriaid.Location = New System.Drawing.Point(9, 193)
-        Me.txtcategoriaid.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtcategoriaid.Location = New System.Drawing.Point(7, 157)
         Me.txtcategoriaid.Name = "txtcategoriaid"
         Me.txtcategoriaid.ReadOnly = True
-        Me.txtcategoriaid.Size = New System.Drawing.Size(344, 27)
+        Me.txtcategoriaid.Size = New System.Drawing.Size(259, 23)
         Me.txtcategoriaid.TabIndex = 2
         Me.txtcategoriaid.TabStop = False
+        Me.txtcategoriaid.Visible = False
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(9, 325)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(7, 248)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(249, 23)
+        Me.Label2.Size = New System.Drawing.Size(208, 20)
         Me.Label2.TabIndex = 11
         Me.Label2.Text = "Estado actual de la Categoria:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Label2.Visible = False
         '
         'txtnombre
         '
         Me.txtnombre.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtnombre.Location = New System.Drawing.Point(9, 273)
-        Me.txtnombre.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtnombre.Location = New System.Drawing.Point(7, 222)
         Me.txtnombre.MaxLength = 50
         Me.txtnombre.Name = "txtnombre"
-        Me.txtnombre.Size = New System.Drawing.Size(344, 27)
+        Me.txtnombre.Size = New System.Drawing.Size(259, 23)
         Me.txtnombre.TabIndex = 1
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(9, 245)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(7, 199)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(210, 23)
+        Me.Label5.Size = New System.Drawing.Size(173, 20)
         Me.Label5.TabIndex = 10
         Me.Label5.Text = "Nombre de la Categoria:"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnnuevo
         '
-        Me.btnnuevo.Location = New System.Drawing.Point(17, 433)
-        Me.btnnuevo.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnnuevo.BackColor = System.Drawing.Color.SteelBlue
+        Me.btnnuevo.Location = New System.Drawing.Point(9, 300)
         Me.btnnuevo.Name = "btnnuevo"
-        Me.btnnuevo.Size = New System.Drawing.Size(100, 28)
+        Me.btnnuevo.Size = New System.Drawing.Size(75, 23)
         Me.btnnuevo.TabIndex = 2
-        Me.btnnuevo.Text = "Nuevo"
-        Me.btnnuevo.UseVisualStyleBackColor = True
+        Me.btnnuevo.Text = "Registrar"
+        Me.btnnuevo.UseVisualStyleBackColor = False
         '
         'txt_Estado
         '
         Me.txt_Estado.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_Estado.Location = New System.Drawing.Point(13, 353)
-        Me.txt_Estado.Margin = New System.Windows.Forms.Padding(4)
+        Me.txt_Estado.Location = New System.Drawing.Point(10, 271)
         Me.txt_Estado.Name = "txt_Estado"
         Me.txt_Estado.ReadOnly = True
-        Me.txt_Estado.Size = New System.Drawing.Size(340, 27)
+        Me.txt_Estado.Size = New System.Drawing.Size(256, 23)
         Me.txt_Estado.TabIndex = 9
         Me.txt_Estado.TabStop = False
+        Me.txt_Estado.Visible = False
         '
         'btnguardar
         '
-        Me.btnguardar.Location = New System.Drawing.Point(127, 433)
-        Me.btnguardar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnguardar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnguardar.Location = New System.Drawing.Point(107, 300)
         Me.btnguardar.Name = "btnguardar"
-        Me.btnguardar.Size = New System.Drawing.Size(100, 28)
+        Me.btnguardar.Size = New System.Drawing.Size(73, 40)
         Me.btnguardar.TabIndex = 3
-        Me.btnguardar.Text = "Guardar"
-        Me.btnguardar.UseVisualStyleBackColor = True
+        Me.btnguardar.Text = "Guardar cambios "
+        Me.btnguardar.UseVisualStyleBackColor = False
         '
         'btneditar
         '
-        Me.btneditar.Location = New System.Drawing.Point(127, 433)
-        Me.btneditar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btneditar.BackColor = System.Drawing.Color.Lime
+        Me.btneditar.Location = New System.Drawing.Point(198, 300)
         Me.btneditar.Name = "btneditar"
-        Me.btneditar.Size = New System.Drawing.Size(100, 28)
+        Me.btneditar.Size = New System.Drawing.Size(67, 40)
         Me.btneditar.TabIndex = 3
         Me.btneditar.Text = "Editar"
-        Me.btneditar.UseVisualStyleBackColor = True
+        Me.btneditar.UseVisualStyleBackColor = False
         '
         'btncancelar
         '
-        Me.btncancelar.Location = New System.Drawing.Point(235, 433)
-        Me.btncancelar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btncancelar.BackColor = System.Drawing.Color.Red
+        Me.btncancelar.Location = New System.Drawing.Point(94, 361)
         Me.btncancelar.Name = "btncancelar"
-        Me.btncancelar.Size = New System.Drawing.Size(100, 28)
+        Me.btncancelar.Size = New System.Drawing.Size(62, 35)
         Me.btncancelar.TabIndex = 4
         Me.btncancelar.Text = "Cancelar"
-        Me.btncancelar.UseVisualStyleBackColor = True
+        Me.btncancelar.UseVisualStyleBackColor = False
         '
         'Panel1
         '
         Me.Panel1.Controls.Add(Me.PanelCateg)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1308, 617)
+        Me.Panel1.Size = New System.Drawing.Size(981, 501)
         Me.Panel1.TabIndex = 6
         '
         'PanelCateg
@@ -293,8 +295,9 @@ Partial Class Form_Categoria
         Me.PanelCateg.Controls.Add(Me.GroupBox1)
         Me.PanelCateg.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelCateg.Location = New System.Drawing.Point(0, 0)
+        Me.PanelCateg.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PanelCateg.Name = "PanelCateg"
-        Me.PanelCateg.Size = New System.Drawing.Size(1308, 617)
+        Me.PanelCateg.Size = New System.Drawing.Size(981, 501)
         Me.PanelCateg.TabIndex = 6
         '
         'GroupBox3
@@ -303,44 +306,48 @@ Partial Class Form_Categoria
         Me.GroupBox3.Controls.Add(Me.Panel4)
         Me.GroupBox3.Controls.Add(Me.datalistado)
         Me.GroupBox3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GroupBox3.Location = New System.Drawing.Point(365, 0)
+        Me.GroupBox3.Location = New System.Drawing.Point(274, 0)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(943, 617)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox3.Size = New System.Drawing.Size(707, 501)
         Me.GroupBox3.TabIndex = 5
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "LISTADO DE CATEGORIAS"
         '
         'Panel4
         '
+        Me.Panel4.BackColor = System.Drawing.Color.SteelBlue
         Me.Panel4.Controls.Add(Me.Label4)
         Me.Panel4.Controls.Add(Me.btn_Activ)
         Me.Panel4.Controls.Add(Me.cbocampo)
         Me.Panel4.Controls.Add(Me.btn_Desact)
         Me.Panel4.Controls.Add(Me.txtbuscar)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel4.Location = New System.Drawing.Point(3, 18)
+        Me.Panel4.Location = New System.Drawing.Point(2, 15)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(937, 53)
+        Me.Panel4.Size = New System.Drawing.Size(703, 43)
         Me.Panel4.TabIndex = 15
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft YaHei", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(29, 18)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(22, 15)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(83, 20)
+        Me.Label4.Size = New System.Drawing.Size(67, 16)
         Me.Label4.TabIndex = 13
         Me.Label4.Text = "Buscar por:"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Form_Categoria
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1308, 617)
+        Me.ClientSize = New System.Drawing.Size(981, 501)
         Me.Controls.Add(Me.Panel1)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "Form_Categoria"
         Me.Text = "Form_Categoria"
         CType(Me.datalistado, System.ComponentModel.ISupportInitialize).EndInit()
