@@ -124,13 +124,6 @@ Public Class Form_Multi
         End If
     End Sub
 
-    Private Sub btnMenu_Click(sender As Object, e As EventArgs) Handles btnMenu.Click
-        If panelInicio.Width = 220 Then
-            tmOCULTAR.Enabled = True
-        ElseIf panelInicio.Width = 60 Then
-            tmMOSTRAR.Enabled = True
-        End If
-    End Sub
 
     Dim cGrip As Integer = 10
 
