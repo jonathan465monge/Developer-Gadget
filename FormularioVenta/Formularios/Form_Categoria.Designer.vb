@@ -39,7 +39,6 @@ Partial Class Form_Categoria
         Me.Label5 = New System.Windows.Forms.Label()
         Me.btnnuevo = New System.Windows.Forms.Button()
         Me.txt_Estado = New System.Windows.Forms.TextBox()
-        Me.btnguardar = New System.Windows.Forms.Button()
         Me.btneditar = New System.Windows.Forms.Button()
         Me.btncancelar = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -151,12 +150,11 @@ Partial Class Form_Categoria
         Me.Panel3.Controls.Add(Me.Label5)
         Me.Panel3.Controls.Add(Me.btnnuevo)
         Me.Panel3.Controls.Add(Me.txt_Estado)
-        Me.Panel3.Controls.Add(Me.btnguardar)
         Me.Panel3.Controls.Add(Me.btneditar)
         Me.Panel3.Controls.Add(Me.btncancelar)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel3.Location = New System.Drawing.Point(3, 16)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(268, 482)
         Me.Panel3.TabIndex = 13
@@ -178,7 +176,7 @@ Partial Class Form_Categoria
         '
         Me.PictureBox1.Image = Global.SistemaDeVentas.My.Resources.Resources.WhatsApp_Image_2021_06_11_at_10_44_39
         Me.PictureBox1.Location = New System.Drawing.Point(11, 11)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(90, 98)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -231,6 +229,7 @@ Partial Class Form_Categoria
         'btnnuevo
         '
         Me.btnnuevo.BackColor = System.Drawing.Color.SteelBlue
+        Me.btnnuevo.Cursor = System.Windows.Forms.Cursors.Default
         Me.btnnuevo.Location = New System.Drawing.Point(9, 300)
         Me.btnnuevo.Name = "btnnuevo"
         Me.btnnuevo.Size = New System.Drawing.Size(75, 23)
@@ -249,20 +248,10 @@ Partial Class Form_Categoria
         Me.txt_Estado.TabStop = False
         Me.txt_Estado.Visible = False
         '
-        'btnguardar
-        '
-        Me.btnguardar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.btnguardar.Location = New System.Drawing.Point(107, 300)
-        Me.btnguardar.Name = "btnguardar"
-        Me.btnguardar.Size = New System.Drawing.Size(73, 40)
-        Me.btnguardar.TabIndex = 3
-        Me.btnguardar.Text = "Guardar cambios "
-        Me.btnguardar.UseVisualStyleBackColor = False
-        '
         'btneditar
         '
         Me.btneditar.BackColor = System.Drawing.Color.Lime
-        Me.btneditar.Location = New System.Drawing.Point(198, 300)
+        Me.btneditar.Location = New System.Drawing.Point(94, 300)
         Me.btneditar.Name = "btneditar"
         Me.btneditar.Size = New System.Drawing.Size(67, 40)
         Me.btneditar.TabIndex = 3
@@ -272,7 +261,7 @@ Partial Class Form_Categoria
         'btncancelar
         '
         Me.btncancelar.BackColor = System.Drawing.Color.Red
-        Me.btncancelar.Location = New System.Drawing.Point(94, 361)
+        Me.btncancelar.Location = New System.Drawing.Point(182, 300)
         Me.btncancelar.Name = "btncancelar"
         Me.btncancelar.Size = New System.Drawing.Size(62, 35)
         Me.btncancelar.TabIndex = 4
@@ -284,7 +273,7 @@ Partial Class Form_Categoria
         Me.Panel1.Controls.Add(Me.PanelCateg)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(981, 501)
         Me.Panel1.TabIndex = 6
@@ -295,7 +284,7 @@ Partial Class Form_Categoria
         Me.PanelCateg.Controls.Add(Me.GroupBox1)
         Me.PanelCateg.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelCateg.Location = New System.Drawing.Point(0, 0)
-        Me.PanelCateg.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelCateg.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelCateg.Name = "PanelCateg"
         Me.PanelCateg.Size = New System.Drawing.Size(981, 501)
         Me.PanelCateg.TabIndex = 6
@@ -307,9 +296,9 @@ Partial Class Form_Categoria
         Me.GroupBox3.Controls.Add(Me.datalistado)
         Me.GroupBox3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupBox3.Location = New System.Drawing.Point(274, 0)
-        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox3.Size = New System.Drawing.Size(707, 501)
         Me.GroupBox3.TabIndex = 5
         Me.GroupBox3.TabStop = False
@@ -325,7 +314,7 @@ Partial Class Form_Categoria
         Me.Panel4.Controls.Add(Me.txtbuscar)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel4.Location = New System.Drawing.Point(2, 15)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(703, 43)
         Me.Panel4.TabIndex = 15
@@ -347,7 +336,7 @@ Partial Class Form_Categoria
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(981, 501)
         Me.Controls.Add(Me.Panel1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Form_Categoria"
         Me.Text = "Form_Categoria"
         CType(Me.datalistado, System.ComponentModel.ISupportInitialize).EndInit()
@@ -372,7 +361,6 @@ Partial Class Form_Categoria
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents btncancelar As Button
     Friend WithEvents btneditar As Button
-    Friend WithEvents btnguardar As Button
     Friend WithEvents btnnuevo As Button
     Friend WithEvents txtnombre As TextBox
     Friend WithEvents txtcategoriaid As TextBox

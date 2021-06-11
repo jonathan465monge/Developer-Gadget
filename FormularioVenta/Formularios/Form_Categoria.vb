@@ -2,7 +2,7 @@
     Private dt As New DataTable
 
     Public Sub limpiar()
-        btnguardar.Visible = True
+
         btneditar.Visible = False
         txtnombre.Text = ""
         txtcategoriaid.Text = ""
@@ -72,7 +72,7 @@
         alternarColoDatGV(datalistado)
     End Sub
 
-    Private Sub btnguardar_Click(sender As Object, e As EventArgs) Handles btnguardar.Click
+    Private Sub btnguardar_Click(sender As Object, e As EventArgs)
         If Me.ValidateChildren = True And txtnombre.Text <> "" Then
             Try
                 Dim dts As New Categoria
@@ -112,7 +112,7 @@
             End If
 
             btneditar.Visible = True
-            btnguardar.Visible = False
+            btnnuevo.Visible = False
         End If
     End Sub
 
@@ -185,5 +185,9 @@
         Call mostrar()
         Call limpiar()
         Call alternarColoDatGV(datalistado)
+    End Sub
+
+    Private Sub datalistado_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles datalistado.CellContentClick
+
     End Sub
 End Class
