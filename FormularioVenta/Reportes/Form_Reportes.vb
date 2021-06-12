@@ -17,4 +17,9 @@
             formulario.BringToFront()
         End If
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        AbrirForm(Of Report_Compras)()
+
+    End Sub
 End Class

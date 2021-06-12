@@ -302,6 +302,18 @@
     <Compile Include="Reportes\Form_RptVenta.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reportes\InformeCompras.designer.vb">
+      <DependentUpon>InformeCompras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\InformeCompras.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\InformeComprasXFechas.designer.vb">
+      <DependentUpon>InformeComprasXFechas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\InformeComprasXFechas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reportes\InformeVentas.Designer.vb">
       <DependentUpon>InformeVentas.vb</DependentUpon>
     </Compile>
@@ -312,6 +324,12 @@
       <DependentUpon>InformeVentasXFechas.vb</DependentUpon>
     </Compile>
     <Compile Include="Reportes\InformeVentasXFechas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Report_Compras.designer.vb">
+      <DependentUpon>Report_Compras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Report_Compras.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reportes\Report_Ventas.Designer.vb">
@@ -383,11 +401,22 @@
     <EmbeddedResource Include="Reportes\Form_RptVenta.resx">
       <DependentUpon>Form_RptVenta.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\InformeCompras.resx">
+      <DependentUpon>InformeCompras.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\InformeComprasXFechas.resx">
+      <DependentUpon>InformeComprasXFechas.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\InformeVentas.resx">
       <DependentUpon>InformeVentas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\InformeVentasXFechas.resx">
       <DependentUpon>InformeVentasXFechas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReCompras.rdlc" />
+    <EmbeddedResource Include="Reportes\ReComprasXFechas.rdlc" />
+    <EmbeddedResource Include="Reportes\Report_Compras.resx">
+      <DependentUpon>Report_Compras.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Report_Ventas.resx">
       <DependentUpon>Report_Ventas.vb</DependentUpon>
@@ -562,6 +591,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\WhatsApp Image 2021-06-11 at 10.44.39.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="SqlServerTypes\Loader.cs" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">

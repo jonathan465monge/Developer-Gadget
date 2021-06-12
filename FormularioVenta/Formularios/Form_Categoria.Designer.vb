@@ -22,7 +22,7 @@ Partial Class Form_Categoria
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.btn_Activ = New System.Windows.Forms.Button()
         Me.cbocampo = New System.Windows.Forms.ComboBox()
         Me.Inexistente = New System.Windows.Forms.LinkLabel()
@@ -37,7 +37,7 @@ Partial Class Form_Categoria
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtnombre = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.btnnuevo = New System.Windows.Forms.Button()
+        Me.btnguardar = New System.Windows.Forms.Button()
         Me.txt_Estado = New System.Windows.Forms.TextBox()
         Me.btneditar = New System.Windows.Forms.Button()
         Me.btncancelar = New System.Windows.Forms.Button()
@@ -111,11 +111,11 @@ Partial Class Form_Categoria
         '
         Me.datalistado.AllowUserToAddRows = False
         Me.datalistado.AllowUserToDeleteRows = False
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.LightSkyBlue
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Palatino Linotype", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.LightSkyBlue
-        Me.datalistado.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.LightSkyBlue
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Palatino Linotype", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.LightSkyBlue
+        Me.datalistado.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.datalistado.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -148,7 +148,7 @@ Partial Class Form_Categoria
         Me.Panel3.Controls.Add(Me.Label2)
         Me.Panel3.Controls.Add(Me.txtnombre)
         Me.Panel3.Controls.Add(Me.Label5)
-        Me.Panel3.Controls.Add(Me.btnnuevo)
+        Me.Panel3.Controls.Add(Me.btnguardar)
         Me.Panel3.Controls.Add(Me.txt_Estado)
         Me.Panel3.Controls.Add(Me.btneditar)
         Me.Panel3.Controls.Add(Me.btncancelar)
@@ -175,7 +175,7 @@ Partial Class Form_Categoria
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.SistemaDeVentas.My.Resources.Resources.WhatsApp_Image_2021_06_11_at_10_44_39
-        Me.PictureBox1.Location = New System.Drawing.Point(11, 11)
+        Me.PictureBox1.Location = New System.Drawing.Point(11, 13)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(90, 98)
@@ -186,13 +186,12 @@ Partial Class Form_Categoria
         'txtcategoriaid
         '
         Me.txtcategoriaid.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtcategoriaid.Location = New System.Drawing.Point(7, 157)
+        Me.txtcategoriaid.Location = New System.Drawing.Point(91, 86)
         Me.txtcategoriaid.Name = "txtcategoriaid"
         Me.txtcategoriaid.ReadOnly = True
-        Me.txtcategoriaid.Size = New System.Drawing.Size(259, 23)
+        Me.txtcategoriaid.Size = New System.Drawing.Size(10, 23)
         Me.txtcategoriaid.TabIndex = 2
         Me.txtcategoriaid.TabStop = False
-        Me.txtcategoriaid.Visible = False
         '
         'Label2
         '
@@ -226,29 +225,28 @@ Partial Class Form_Categoria
         Me.Label5.Text = "Nombre de la Categoria:"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'btnnuevo
+        'btnguardar
         '
-        Me.btnnuevo.BackColor = System.Drawing.Color.Blue
-        Me.btnnuevo.Cursor = System.Windows.Forms.Cursors.Default
-        Me.btnnuevo.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnnuevo.ForeColor = System.Drawing.SystemColors.Control
-        Me.btnnuevo.Location = New System.Drawing.Point(9, 300)
-        Me.btnnuevo.Name = "btnnuevo"
-        Me.btnnuevo.Size = New System.Drawing.Size(79, 40)
-        Me.btnnuevo.TabIndex = 2
-        Me.btnnuevo.Text = "Registrar"
-        Me.btnnuevo.UseVisualStyleBackColor = False
+        Me.btnguardar.BackColor = System.Drawing.Color.Blue
+        Me.btnguardar.Cursor = System.Windows.Forms.Cursors.Default
+        Me.btnguardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnguardar.ForeColor = System.Drawing.SystemColors.Control
+        Me.btnguardar.Location = New System.Drawing.Point(9, 300)
+        Me.btnguardar.Name = "btnguardar"
+        Me.btnguardar.Size = New System.Drawing.Size(79, 40)
+        Me.btnguardar.TabIndex = 2
+        Me.btnguardar.Text = "Registrar"
+        Me.btnguardar.UseVisualStyleBackColor = False
         '
         'txt_Estado
         '
         Me.txt_Estado.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_Estado.Location = New System.Drawing.Point(10, 271)
+        Me.txt_Estado.Location = New System.Drawing.Point(91, 47)
         Me.txt_Estado.Name = "txt_Estado"
         Me.txt_Estado.ReadOnly = True
-        Me.txt_Estado.Size = New System.Drawing.Size(256, 23)
+        Me.txt_Estado.Size = New System.Drawing.Size(10, 23)
         Me.txt_Estado.TabIndex = 9
         Me.txt_Estado.TabStop = False
-        Me.txt_Estado.Visible = False
         '
         'btneditar
         '
@@ -365,7 +363,7 @@ Partial Class Form_Categoria
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents btncancelar As Button
     Friend WithEvents btneditar As Button
-    Friend WithEvents btnnuevo As Button
+    Friend WithEvents btnguardar As Button
     Friend WithEvents txtnombre As TextBox
     Friend WithEvents txtcategoriaid As TextBox
     Friend WithEvents Label1 As Label

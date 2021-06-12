@@ -32,7 +32,7 @@
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-        btnnuevo.Visible = True
+        btnguardar.Visible = True
         btneditar.Visible = False
         buscar()
     End Sub
@@ -66,9 +66,28 @@
         alternarColoDatGV(datalistado)
     End Sub
 
-    Private Sub btnuevo_Click(sender As Object, e As EventArgs) Handles btnnuevo.Click
-        limpiar()
-        mostrar()
+    Private Sub btnuevo_Click(sender As Object, e As EventArgs) Handles btnguardar.Click
+        If Me.ValidateChildren = True And txtnombre.Text <> "" Then
+            Try
+                Dim dts As New Categoria
+                Dim func As New FCategoria
+
+                dts.Nombre = txtnombre.Text
+                If func.insertar(dts) Then
+                    MessageBox.Show("Categoria Registrada Correctamente", "Guardando Registros", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    mostrar()
+                    limpiar()
+                Else
+                    MessageBox.Show("Categoria no fue registrada intente de nuevo", "Guardando Registros", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    mostrar()
+                    limpiar()
+                End If
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        Else
+            MessageBox.Show("Faltan Ingresar algunos Datos", "Guardando Registros", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
         alternarColoDatGV(datalistado)
     End Sub
 
@@ -112,7 +131,7 @@
             End If
 
             btneditar.Visible = True
-            btnnuevo.Visible = False
+            btnguardar.Visible = False
         End If
     End Sub
 
