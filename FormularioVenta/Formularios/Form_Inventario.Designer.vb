@@ -24,6 +24,7 @@ Partial Class Form_Inventario
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.panelBuscarProduct = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.txt_Stck = New System.Windows.Forms.TextBox()
         Me.txt_Estd = New System.Windows.Forms.TextBox()
@@ -33,14 +34,14 @@ Partial Class Form_Inventario
         Me.cbocampo = New System.Windows.Forms.ComboBox()
         Me.dataproductos = New System.Windows.Forms.DataGridView()
         Me.inexistente = New System.Windows.Forms.LinkLabel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.panelBuscarProduct.SuspendLayout()
-        CType(Me.dataproductos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dataproductos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'panelBuscarProduct
         '
+        Me.panelBuscarProduct.BackColor = System.Drawing.Color.SteelBlue
         Me.panelBuscarProduct.Controls.Add(Me.PictureBox1)
         Me.panelBuscarProduct.Controls.Add(Me.Button1)
         Me.panelBuscarProduct.Controls.Add(Me.txt_Stck)
@@ -51,21 +52,33 @@ Partial Class Form_Inventario
         Me.panelBuscarProduct.Controls.Add(Me.cbocampo)
         Me.panelBuscarProduct.Dock = System.Windows.Forms.DockStyle.Top
         Me.panelBuscarProduct.Location = New System.Drawing.Point(0, 0)
-        Me.panelBuscarProduct.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.panelBuscarProduct.Margin = New System.Windows.Forms.Padding(2)
         Me.panelBuscarProduct.Name = "panelBuscarProduct"
         Me.panelBuscarProduct.Size = New System.Drawing.Size(1018, 38)
         Me.panelBuscarProduct.TabIndex = 26
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.SistemaDeVentas.My.Resources.Resources.WhatsApp_Image_2021_06_11_at_10_44_39
+        Me.PictureBox1.Location = New System.Drawing.Point(861, 0)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(52, 38)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 29
+        Me.PictureBox1.TabStop = False
+        '
         'Button1
         '
         Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.Button1.BackColor = System.Drawing.SystemColors.Control
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button1.Location = New System.Drawing.Point(952, 6)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(56, 28)
         Me.Button1.TabIndex = 28
         Me.Button1.Text = "Refresh"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'txt_Stck
         '
@@ -132,11 +145,11 @@ Partial Class Form_Inventario
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.CornflowerBlue
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.MediumSlateBlue
         Me.dataproductos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle2
-        Me.dataproductos.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
+        Me.dataproductos.BackgroundColor = System.Drawing.SystemColors.Highlight
         Me.dataproductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dataproductos.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dataproductos.Location = New System.Drawing.Point(0, 38)
-        Me.dataproductos.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dataproductos.Margin = New System.Windows.Forms.Padding(2)
         Me.dataproductos.Name = "dataproductos"
         Me.dataproductos.ReadOnly = True
         Me.dataproductos.RowHeadersVisible = False
@@ -157,16 +170,6 @@ Partial Class Form_Inventario
         Me.inexistente.Text = "Datos Inexistentes"
         Me.inexistente.Visible = False
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.SistemaDeVentas.My.Resources.Resources.WhatsApp_Image_2021_06_11_at_10_44_39
-        Me.PictureBox1.Location = New System.Drawing.Point(861, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(52, 38)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 29
-        Me.PictureBox1.TabStop = False
-        '
         'Form_Inventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -175,13 +178,13 @@ Partial Class Form_Inventario
         Me.Controls.Add(Me.inexistente)
         Me.Controls.Add(Me.dataproductos)
         Me.Controls.Add(Me.panelBuscarProduct)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Form_Inventario"
         Me.Text = "Form_Inventario"
         Me.panelBuscarProduct.ResumeLayout(False)
         Me.panelBuscarProduct.PerformLayout()
-        CType(Me.dataproductos, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dataproductos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

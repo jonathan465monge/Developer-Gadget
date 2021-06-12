@@ -108,6 +108,7 @@ Partial Class Form_Compras
         Me.TabControl1.Controls.Add(Me.comprar)
         Me.TabControl1.Controls.Add(Me.pedidos)
         Me.TabControl1.Controls.Add(Me.historial)
+        Me.TabControl1.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
@@ -144,6 +145,7 @@ Partial Class Form_Compras
         '
         Me.dataCompraRecien.AllowUserToAddRows = False
         Me.dataCompraRecien.AllowUserToDeleteRows = False
+        Me.dataCompraRecien.BackgroundColor = System.Drawing.SystemColors.Highlight
         Me.dataCompraRecien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dataCompraRecien.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CompraID, Me.ProductoID, Me.NombreProducto, Me.Cantidad, Me.PrecioTotal, Me.PrecioUnidad})
         Me.dataCompraRecien.Dock = System.Windows.Forms.DockStyle.Fill
@@ -219,7 +221,7 @@ Partial Class Form_Compras
         '
         'Panel7
         '
-        Me.Panel7.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.Panel7.BackColor = System.Drawing.Color.SteelBlue
         Me.Panel7.Controls.Add(Me.Label12)
         Me.Panel7.Controls.Add(Me.Button1)
         Me.Panel7.Controls.Add(Me.txtTotalVenta)
@@ -244,6 +246,8 @@ Partial Class Form_Compras
         'Button1
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.Button1.BackColor = System.Drawing.Color.Blue
+        Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.Location = New System.Drawing.Point(28, 31)
         Me.Button1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.Button1.Name = "Button1"
@@ -251,7 +255,7 @@ Partial Class Form_Compras
         Me.Button1.TabIndex = 38
         Me.Button1.TabStop = False
         Me.Button1.Text = "Guardar Pedido"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'txtTotalVenta
         '
@@ -268,7 +272,7 @@ Partial Class Form_Compras
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.Panel2.BackColor = System.Drawing.Color.SteelBlue
         Me.Panel2.Controls.Add(Me.Label13)
         Me.Panel2.Controls.Add(Me.btn_EvniarCompra)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Right
@@ -293,6 +297,8 @@ Partial Class Form_Compras
         'btn_EvniarCompra
         '
         Me.btn_EvniarCompra.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.btn_EvniarCompra.BackColor = System.Drawing.Color.Blue
+        Me.btn_EvniarCompra.ForeColor = System.Drawing.Color.White
         Me.btn_EvniarCompra.Location = New System.Drawing.Point(42, 31)
         Me.btn_EvniarCompra.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.btn_EvniarCompra.Name = "btn_EvniarCompra"
@@ -300,7 +306,7 @@ Partial Class Form_Compras
         Me.btn_EvniarCompra.TabIndex = 37
         Me.btn_EvniarCompra.TabStop = False
         Me.btn_EvniarCompra.Text = "Enviar pedido al proveedor..."
-        Me.btn_EvniarCompra.UseVisualStyleBackColor = True
+        Me.btn_EvniarCompra.UseVisualStyleBackColor = False
         '
         'Panel3
         '
@@ -316,7 +322,7 @@ Partial Class Form_Compras
         '
         'PanelDetalles
         '
-        Me.PanelDetalles.BackColor = System.Drawing.Color.SteelBlue
+        Me.PanelDetalles.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.PanelDetalles.Controls.Add(Me.eliminar)
         Me.PanelDetalles.Controls.Add(Me.Label9)
         Me.PanelDetalles.Controls.Add(Me.btn_AddLista)
@@ -347,6 +353,7 @@ Partial Class Form_Compras
         '
         'eliminar
         '
+        Me.eliminar.BackColor = System.Drawing.Color.Red
         Me.eliminar.Location = New System.Drawing.Point(133, 212)
         Me.eliminar.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.eliminar.Name = "eliminar"
@@ -354,7 +361,7 @@ Partial Class Form_Compras
         Me.eliminar.TabIndex = 43
         Me.eliminar.TabStop = False
         Me.eliminar.Text = "Eliminar del listado"
-        Me.eliminar.UseVisualStyleBackColor = True
+        Me.eliminar.UseVisualStyleBackColor = False
         '
         'Label9
         '
@@ -369,13 +376,15 @@ Partial Class Form_Compras
         '
         'btn_AddLista
         '
+        Me.btn_AddLista.BackColor = System.Drawing.Color.Blue
+        Me.btn_AddLista.ForeColor = System.Drawing.SystemColors.Control
         Me.btn_AddLista.Location = New System.Drawing.Point(2, 265)
         Me.btn_AddLista.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.btn_AddLista.Name = "btn_AddLista"
         Me.btn_AddLista.Size = New System.Drawing.Size(293, 46)
         Me.btn_AddLista.TabIndex = 5
         Me.btn_AddLista.Text = "Agregar producto a la lista"
-        Me.btn_AddLista.UseVisualStyleBackColor = True
+        Me.btn_AddLista.UseVisualStyleBackColor = False
         '
         'Label4
         '
@@ -495,13 +504,15 @@ Partial Class Form_Compras
         '
         'btnCancelEdit
         '
+        Me.btnCancelEdit.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btnCancelEdit.ForeColor = System.Drawing.SystemColors.Control
         Me.btnCancelEdit.Location = New System.Drawing.Point(211, 160)
         Me.btnCancelEdit.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.btnCancelEdit.Name = "btnCancelEdit"
         Me.btnCancelEdit.Size = New System.Drawing.Size(84, 39)
         Me.btnCancelEdit.TabIndex = 39
         Me.btnCancelEdit.Text = "Cancelar Edicion"
-        Me.btnCancelEdit.UseVisualStyleBackColor = True
+        Me.btnCancelEdit.UseVisualStyleBackColor = False
         Me.btnCancelEdit.Visible = False
         '
         'Label5
@@ -535,13 +546,14 @@ Partial Class Form_Compras
         '
         'btnEdit
         '
+        Me.btnEdit.BackColor = System.Drawing.Color.Lime
         Me.btnEdit.Location = New System.Drawing.Point(123, 160)
         Me.btnEdit.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.btnEdit.Name = "btnEdit"
         Me.btnEdit.Size = New System.Drawing.Size(84, 39)
         Me.btnEdit.TabIndex = 38
         Me.btnEdit.Text = "Aplicar cambios"
-        Me.btnEdit.UseVisualStyleBackColor = True
+        Me.btnEdit.UseVisualStyleBackColor = False
         Me.btnEdit.Visible = False
         '
         'txt_nombreProd
@@ -555,6 +567,7 @@ Partial Class Form_Compras
         '
         'panelDetallesCompra
         '
+        Me.panelDetallesCompra.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.panelDetallesCompra.Controls.Add(Me.Button2)
         Me.panelDetallesCompra.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.panelDetallesCompra.Enabled = False
@@ -566,6 +579,11 @@ Partial Class Form_Compras
         '
         'Button2
         '
+        Me.Button2.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Button2.Cursor = System.Windows.Forms.Cursors.No
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button2.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.Button2.Location = New System.Drawing.Point(2, 9)
         Me.Button2.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.Button2.Name = "Button2"
@@ -577,7 +595,7 @@ Partial Class Form_Compras
         '
         'Panel6
         '
-        Me.Panel6.BackColor = System.Drawing.Color.SteelBlue
+        Me.Panel6.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel6.Controls.Add(Me.Label2)
         Me.Panel6.Controls.Add(Me.btn_pedido)
         Me.Panel6.Controls.Add(Me.Label1)
@@ -679,6 +697,7 @@ Partial Class Form_Compras
         '
         Me.dataEstadoPedido.AllowUserToAddRows = False
         Me.dataEstadoPedido.AllowUserToDeleteRows = False
+        Me.dataEstadoPedido.BackgroundColor = System.Drawing.SystemColors.Highlight
         Me.dataEstadoPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dataEstadoPedido.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dataEstadoPedido.Location = New System.Drawing.Point(2, 3)
@@ -693,6 +712,7 @@ Partial Class Form_Compras
         '
         'Panel5
         '
+        Me.Panel5.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel5.Controls.Add(Me.btn_Confirmar)
         Me.Panel5.Controls.Add(Me.btn_Cancelar)
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Right
@@ -704,23 +724,28 @@ Partial Class Form_Compras
         '
         'btn_Confirmar
         '
+        Me.btn_Confirmar.BackColor = System.Drawing.Color.Blue
+        Me.btn_Confirmar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btn_Confirmar.ForeColor = System.Drawing.SystemColors.Control
         Me.btn_Confirmar.Location = New System.Drawing.Point(7, 101)
         Me.btn_Confirmar.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.btn_Confirmar.Name = "btn_Confirmar"
         Me.btn_Confirmar.Size = New System.Drawing.Size(99, 78)
         Me.btn_Confirmar.TabIndex = 1
         Me.btn_Confirmar.Text = "Confirmar Pedido"
-        Me.btn_Confirmar.UseVisualStyleBackColor = True
+        Me.btn_Confirmar.UseVisualStyleBackColor = False
         '
         'btn_Cancelar
         '
+        Me.btn_Cancelar.BackColor = System.Drawing.Color.Red
+        Me.btn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btn_Cancelar.Location = New System.Drawing.Point(7, 286)
         Me.btn_Cancelar.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.btn_Cancelar.Name = "btn_Cancelar"
         Me.btn_Cancelar.Size = New System.Drawing.Size(99, 77)
         Me.btn_Cancelar.TabIndex = 2
         Me.btn_Cancelar.Text = "Cancelar Pedido"
-        Me.btn_Cancelar.UseVisualStyleBackColor = True
+        Me.btn_Cancelar.UseVisualStyleBackColor = False
         '
         'historial
         '
@@ -737,6 +762,7 @@ Partial Class Form_Compras
         '
         Me.dataCompraHistorial.AllowUserToAddRows = False
         Me.dataCompraHistorial.AllowUserToDeleteRows = False
+        Me.dataCompraHistorial.BackgroundColor = System.Drawing.SystemColors.Highlight
         Me.dataCompraHistorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dataCompraHistorial.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dataCompraHistorial.Location = New System.Drawing.Point(0, 0)

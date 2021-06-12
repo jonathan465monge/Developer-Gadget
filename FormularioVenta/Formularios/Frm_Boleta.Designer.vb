@@ -24,36 +24,38 @@ Partial Class Frm_Boleta
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.DatosRepor = New SistemaDeVentas.DatosRepor()
         Me.mostrar_detalleventaRecienBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DatosRepor = New SistemaDeVentas.DatosRepor()
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.mostrar_detalleventaRecienTableAdapter = New SistemaDeVentas.DatosReporTableAdapters.mostrar_detalleventaRecienTableAdapter()
-        CType(Me.DatosRepor, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.mostrar_detalleventaRecienBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DatosRepor, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'ReportViewer1
+        'mostrar_detalleventaRecienBindingSource
         '
-        Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
-        ReportDataSource1.Name = "DataSet1"
-        ReportDataSource1.Value = Me.mostrar_detalleventaRecienBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
-        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "SistemaDeVentas.Factura.rdlc"
-        Me.ReportViewer1.Location = New System.Drawing.Point(0, 0)
-        Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.ServerReport.BearerToken = Nothing
-        Me.ReportViewer1.Size = New System.Drawing.Size(789, 625)
-        Me.ReportViewer1.TabIndex = 0
+        Me.mostrar_detalleventaRecienBindingSource.DataMember = "mostrar_detalleventaRecien"
+        Me.mostrar_detalleventaRecienBindingSource.DataSource = Me.DatosRepor
         '
         'DatosRepor
         '
         Me.DatosRepor.DataSetName = "DatosRepor"
         Me.DatosRepor.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'mostrar_detalleventaRecienBindingSource
+        'ReportViewer1
         '
-        Me.mostrar_detalleventaRecienBindingSource.DataMember = "mostrar_detalleventaRecien"
-        Me.mostrar_detalleventaRecienBindingSource.DataSource = Me.DatosRepor
+        Me.ReportViewer1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
+        ReportDataSource1.Name = "DataSet1"
+        ReportDataSource1.Value = Me.mostrar_detalleventaRecienBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
+        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "SistemaDeVentas.Factura.rdlc"
+        Me.ReportViewer1.Location = New System.Drawing.Point(0, 0)
+        Me.ReportViewer1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ReportViewer1.Name = "ReportViewer1"
+        Me.ReportViewer1.ServerReport.BearerToken = Nothing
+        Me.ReportViewer1.Size = New System.Drawing.Size(526, 406)
+        Me.ReportViewer1.TabIndex = 0
         '
         'mostrar_detalleventaRecienTableAdapter
         '
@@ -61,15 +63,15 @@ Partial Class Frm_Boleta
         '
         'Frm_Boleta
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(789, 625)
+        Me.ClientSize = New System.Drawing.Size(526, 406)
         Me.Controls.Add(Me.ReportViewer1)
-        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.Name = "Frm_Boleta"
         Me.Text = "Frm_Boleta"
-        CType(Me.DatosRepor, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.mostrar_detalleventaRecienBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DatosRepor, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

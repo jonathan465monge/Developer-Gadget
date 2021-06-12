@@ -106,7 +106,7 @@ Partial Class Form_Proveedor
         '
         'GroupBox1
         '
-        Me.GroupBox1.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.GroupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.GroupBox1.Controls.Add(Me.PictureBox1)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.Label4)
@@ -136,7 +136,7 @@ Partial Class Form_Proveedor
         '
         Me.PictureBox1.Image = Global.SistemaDeVentas.My.Resources.Resources.WhatsApp_Image_2021_06_11_at_10_44_39
         Me.PictureBox1.Location = New System.Drawing.Point(5, 18)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(109, 109)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -234,39 +234,49 @@ Partial Class Form_Proveedor
         '
         'btncancelar
         '
+        Me.btncancelar.BackColor = System.Drawing.Color.Red
+        Me.btncancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btncancelar.Location = New System.Drawing.Point(175, 419)
         Me.btncancelar.Name = "btncancelar"
         Me.btncancelar.Size = New System.Drawing.Size(75, 23)
         Me.btncancelar.TabIndex = 6
         Me.btncancelar.Text = "Cancelar"
-        Me.btncancelar.UseVisualStyleBackColor = True
+        Me.btncancelar.UseVisualStyleBackColor = False
         '
         'btneditar
         '
+        Me.btneditar.BackColor = System.Drawing.Color.Lime
+        Me.btneditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btneditar.Location = New System.Drawing.Point(94, 419)
         Me.btneditar.Name = "btneditar"
         Me.btneditar.Size = New System.Drawing.Size(75, 23)
         Me.btneditar.TabIndex = 5
         Me.btneditar.Text = "Editar"
-        Me.btneditar.UseVisualStyleBackColor = True
+        Me.btneditar.UseVisualStyleBackColor = False
         '
         'btnguardar
         '
+        Me.btnguardar.BackColor = System.Drawing.Color.Blue
+        Me.btnguardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnguardar.ForeColor = System.Drawing.SystemColors.Control
         Me.btnguardar.Location = New System.Drawing.Point(94, 462)
         Me.btnguardar.Name = "btnguardar"
         Me.btnguardar.Size = New System.Drawing.Size(75, 23)
         Me.btnguardar.TabIndex = 5
         Me.btnguardar.Text = "Guardar"
-        Me.btnguardar.UseVisualStyleBackColor = True
+        Me.btnguardar.UseVisualStyleBackColor = False
         '
         'btnnuevo
         '
+        Me.btnnuevo.BackColor = System.Drawing.Color.DimGray
+        Me.btnnuevo.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnnuevo.ForeColor = System.Drawing.SystemColors.Control
         Me.btnnuevo.Location = New System.Drawing.Point(9, 419)
         Me.btnnuevo.Name = "btnnuevo"
         Me.btnnuevo.Size = New System.Drawing.Size(75, 23)
         Me.btnnuevo.TabIndex = 4
         Me.btnnuevo.Text = "Nuevo"
-        Me.btnnuevo.UseVisualStyleBackColor = True
+        Me.btnnuevo.UseVisualStyleBackColor = False
         '
         'txtnombre
         '
@@ -303,7 +313,7 @@ Partial Class Form_Proveedor
         Me.Panel1.Controls.Add(Me.GroupBox1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(996, 574)
         Me.Panel1.TabIndex = 7
@@ -315,9 +325,9 @@ Partial Class Form_Proveedor
         Me.GroupBox3.Controls.Add(Me.Panel2)
         Me.GroupBox3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupBox3.Location = New System.Drawing.Point(256, 0)
-        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox3.Size = New System.Drawing.Size(740, 574)
         Me.GroupBox3.TabIndex = 7
         Me.GroupBox3.TabStop = False
@@ -337,10 +347,11 @@ Partial Class Form_Proveedor
         '
         Me.datalistado.AllowUserToAddRows = False
         Me.datalistado.AllowUserToDeleteRows = False
+        Me.datalistado.BackgroundColor = System.Drawing.SystemColors.Highlight
         Me.datalistado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.datalistado.Dock = System.Windows.Forms.DockStyle.Fill
         Me.datalistado.Location = New System.Drawing.Point(2, 64)
-        Me.datalistado.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.datalistado.Margin = New System.Windows.Forms.Padding(2)
         Me.datalistado.Name = "datalistado"
         Me.datalistado.ReadOnly = True
         Me.datalistado.RowTemplate.Height = 24
@@ -358,7 +369,7 @@ Partial Class Form_Proveedor
         Me.Panel2.Controls.Add(Me.cbocampo)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(2, 15)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(736, 49)
         Me.Panel2.TabIndex = 14
@@ -369,7 +380,7 @@ Partial Class Form_Proveedor
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(996, 574)
         Me.Controls.Add(Me.Panel1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Form_Proveedor"
         Me.Text = "Form_Proveedor"
         Me.GroupBox1.ResumeLayout(False)

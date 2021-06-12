@@ -58,22 +58,27 @@ Partial Class Form_Producto
         'btneditar
         '
         Me.btneditar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.btneditar.BackColor = System.Drawing.Color.Lime
+        Me.btneditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btneditar.Location = New System.Drawing.Point(519, 20)
         Me.btneditar.Name = "btneditar"
         Me.btneditar.Size = New System.Drawing.Size(75, 23)
         Me.btneditar.TabIndex = 6
         Me.btneditar.Text = "Editar"
-        Me.btneditar.UseVisualStyleBackColor = True
+        Me.btneditar.UseVisualStyleBackColor = False
         '
         'btnnuevo
         '
         Me.btnnuevo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.btnnuevo.BackColor = System.Drawing.Color.DimGray
+        Me.btnnuevo.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnnuevo.ForeColor = System.Drawing.SystemColors.Control
         Me.btnnuevo.Location = New System.Drawing.Point(438, 20)
         Me.btnnuevo.Name = "btnnuevo"
         Me.btnnuevo.Size = New System.Drawing.Size(75, 23)
         Me.btnnuevo.TabIndex = 4
         Me.btnnuevo.Text = "Nuevo"
-        Me.btnnuevo.UseVisualStyleBackColor = True
+        Me.btnnuevo.UseVisualStyleBackColor = False
         '
         'inexistente
         '
@@ -105,7 +110,8 @@ Partial Class Form_Producto
         '
         Me.btn_desact.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btn_desact.BackColor = System.Drawing.SystemColors.Highlight
+        Me.btn_desact.BackColor = System.Drawing.Color.Red
+        Me.btn_desact.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btn_desact.Location = New System.Drawing.Point(910, 3)
         Me.btn_desact.Name = "btn_desact"
         Me.btn_desact.Size = New System.Drawing.Size(81, 32)
@@ -183,8 +189,9 @@ Partial Class Form_Producto
         'Button1
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.Button1.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Button1.BackColor = System.Drawing.SystemColors.Control
         Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button1.Location = New System.Drawing.Point(357, 20)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
@@ -222,6 +229,7 @@ Partial Class Form_Producto
         '
         Me.dataproductos.AllowUserToAddRows = False
         Me.dataproductos.AllowUserToDeleteRows = False
+        Me.dataproductos.BackgroundColor = System.Drawing.SystemColors.Highlight
         Me.dataproductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dataproductos.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dataproductos.Location = New System.Drawing.Point(2, 53)

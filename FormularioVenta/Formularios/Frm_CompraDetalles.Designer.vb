@@ -46,7 +46,7 @@ Partial Class Frm_CompraDetalles
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(401, 37)
         Me.Panel1.TabIndex = 0
@@ -59,7 +59,7 @@ Partial Class Frm_CompraDetalles
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Image = Global.SistemaDeVentas.My.Resources.Resources.iconox
         Me.Button1.Location = New System.Drawing.Point(358, 4)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(34, 28)
         Me.Button1.TabIndex = 5
@@ -81,7 +81,7 @@ Partial Class Frm_CompraDetalles
         Me.Panel2.BackColor = System.Drawing.Color.SteelBlue
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel2.Location = New System.Drawing.Point(0, 403)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(401, 41)
         Me.Panel2.TabIndex = 1
@@ -92,7 +92,7 @@ Partial Class Frm_CompraDetalles
         Me.Panel3.Controls.Add(Me.Panel4)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel3.Location = New System.Drawing.Point(0, 37)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(401, 366)
         Me.Panel3.TabIndex = 2
@@ -101,10 +101,11 @@ Partial Class Frm_CompraDetalles
         '
         Me.dataDetallesCompra.AllowUserToAddRows = False
         Me.dataDetallesCompra.AllowUserToDeleteRows = False
+        Me.dataDetallesCompra.BackgroundColor = System.Drawing.SystemColors.Highlight
         Me.dataDetallesCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dataDetallesCompra.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dataDetallesCompra.Location = New System.Drawing.Point(0, 32)
-        Me.dataDetallesCompra.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dataDetallesCompra.Margin = New System.Windows.Forms.Padding(2)
         Me.dataDetallesCompra.Name = "dataDetallesCompra"
         Me.dataDetallesCompra.ReadOnly = True
         Me.dataDetallesCompra.RowTemplate.Height = 24
@@ -114,14 +115,14 @@ Partial Class Frm_CompraDetalles
         '
         'Panel4
         '
-        Me.Panel4.BackColor = System.Drawing.Color.MediumPurple
+        Me.Panel4.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel4.Controls.Add(Me.Label2)
         Me.Panel4.Controls.Add(Me.Label1)
         Me.Panel4.Controls.Add(Me.txtEstadoCompra)
         Me.Panel4.Controls.Add(Me.txtCodigoCompra)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel4.Location = New System.Drawing.Point(0, 0)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(401, 32)
         Me.Panel4.TabIndex = 0
@@ -150,7 +151,7 @@ Partial Class Frm_CompraDetalles
         '
         Me.txtEstadoCompra.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtEstadoCompra.Location = New System.Drawing.Point(291, 6)
-        Me.txtEstadoCompra.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtEstadoCompra.Margin = New System.Windows.Forms.Padding(2)
         Me.txtEstadoCompra.Name = "txtEstadoCompra"
         Me.txtEstadoCompra.ReadOnly = True
         Me.txtEstadoCompra.Size = New System.Drawing.Size(102, 23)
@@ -159,7 +160,7 @@ Partial Class Frm_CompraDetalles
         'txtCodigoCompra
         '
         Me.txtCodigoCompra.Location = New System.Drawing.Point(124, 7)
-        Me.txtCodigoCompra.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtCodigoCompra.Margin = New System.Windows.Forms.Padding(2)
         Me.txtCodigoCompra.Name = "txtCodigoCompra"
         Me.txtCodigoCompra.ReadOnly = True
         Me.txtCodigoCompra.Size = New System.Drawing.Size(76, 20)
@@ -174,7 +175,7 @@ Partial Class Frm_CompraDetalles
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Frm_CompraDetalles"
         Me.Text = "Frm_Compra"
         Me.Panel1.ResumeLayout(False)

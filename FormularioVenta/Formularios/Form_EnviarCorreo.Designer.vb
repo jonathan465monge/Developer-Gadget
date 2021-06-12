@@ -51,7 +51,7 @@ Partial Class Form_EnviarCorreo
         'txt_CorreoUser
         '
         Me.txt_CorreoUser.Location = New System.Drawing.Point(43, 2)
-        Me.txt_CorreoUser.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txt_CorreoUser.Margin = New System.Windows.Forms.Padding(2)
         Me.txt_CorreoUser.Name = "txt_CorreoUser"
         Me.txt_CorreoUser.Size = New System.Drawing.Size(170, 20)
         Me.txt_CorreoUser.TabIndex = 0
@@ -60,7 +60,7 @@ Partial Class Form_EnviarCorreo
         'txt_PassUser
         '
         Me.txt_PassUser.Location = New System.Drawing.Point(287, 2)
-        Me.txt_PassUser.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txt_PassUser.Margin = New System.Windows.Forms.Padding(2)
         Me.txt_PassUser.Name = "txt_PassUser"
         Me.txt_PassUser.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txt_PassUser.Size = New System.Drawing.Size(160, 20)
@@ -69,7 +69,7 @@ Partial Class Form_EnviarCorreo
         'txt_CorreoProv
         '
         Me.txt_CorreoProv.Location = New System.Drawing.Point(43, 37)
-        Me.txt_CorreoProv.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txt_CorreoProv.Margin = New System.Windows.Forms.Padding(2)
         Me.txt_CorreoProv.Name = "txt_CorreoProv"
         Me.txt_CorreoProv.Size = New System.Drawing.Size(170, 20)
         Me.txt_CorreoProv.TabIndex = 2
@@ -77,7 +77,7 @@ Partial Class Form_EnviarCorreo
         'txt_Asunto
         '
         Me.txt_Asunto.Location = New System.Drawing.Point(287, 39)
-        Me.txt_Asunto.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txt_Asunto.Margin = New System.Windows.Forms.Padding(2)
         Me.txt_Asunto.Name = "txt_Asunto"
         Me.txt_Asunto.Size = New System.Drawing.Size(160, 20)
         Me.txt_Asunto.TabIndex = 3
@@ -125,7 +125,7 @@ Partial Class Form_EnviarCorreo
         'txt_Pedido
         '
         Me.txt_Pedido.Location = New System.Drawing.Point(3, 121)
-        Me.txt_Pedido.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txt_Pedido.Margin = New System.Windows.Forms.Padding(2)
         Me.txt_Pedido.Multiline = True
         Me.txt_Pedido.Name = "txt_Pedido"
         Me.txt_Pedido.Size = New System.Drawing.Size(444, 154)
@@ -133,13 +133,15 @@ Partial Class Form_EnviarCorreo
         '
         'Button1
         '
+        Me.Button1.BackColor = System.Drawing.Color.Indigo
+        Me.Button1.ForeColor = System.Drawing.SystemColors.Control
         Me.Button1.Location = New System.Drawing.Point(196, 279)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(64, 37)
         Me.Button1.TabIndex = 9
         Me.Button1.Text = "Enviar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Label5
         '
@@ -154,20 +156,21 @@ Partial Class Form_EnviarCorreo
         'txtRuta
         '
         Me.txtRuta.Location = New System.Drawing.Point(113, 72)
-        Me.txtRuta.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtRuta.Margin = New System.Windows.Forms.Padding(2)
         Me.txtRuta.Name = "txtRuta"
         Me.txtRuta.Size = New System.Drawing.Size(265, 20)
         Me.txtRuta.TabIndex = 11
         '
         'btn_Examinar
         '
+        Me.btn_Examinar.BackColor = System.Drawing.Color.Lime
         Me.btn_Examinar.Location = New System.Drawing.Point(382, 69)
-        Me.btn_Examinar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btn_Examinar.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_Examinar.Name = "btn_Examinar"
         Me.btn_Examinar.Size = New System.Drawing.Size(64, 25)
         Me.btn_Examinar.TabIndex = 12
         Me.btn_Examinar.Text = "Adjuntar"
-        Me.btn_Examinar.UseVisualStyleBackColor = True
+        Me.btn_Examinar.UseVisualStyleBackColor = False
         '
         'Label6
         '
@@ -190,7 +193,7 @@ Partial Class Form_EnviarCorreo
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(450, 32)
         Me.Panel1.TabIndex = 14
@@ -204,7 +207,7 @@ Partial Class Form_EnviarCorreo
         Me.btn_Cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_Cerrar.Image = Global.SistemaDeVentas.My.Resources.Resources.iconox
         Me.btn_Cerrar.Location = New System.Drawing.Point(419, 3)
-        Me.btn_Cerrar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btn_Cerrar.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_Cerrar.Name = "btn_Cerrar"
         Me.btn_Cerrar.Size = New System.Drawing.Size(26, 28)
         Me.btn_Cerrar.TabIndex = 5
@@ -212,9 +215,10 @@ Partial Class Form_EnviarCorreo
         '
         'PictureBox1
         '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Indigo
         Me.PictureBox1.Image = Global.SistemaDeVentas.My.Resources.Resources.icono_de_correo
         Me.PictureBox1.Location = New System.Drawing.Point(10, 2)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(26, 28)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -241,7 +245,7 @@ Partial Class Form_EnviarCorreo
         Me.Panel2.Controls.Add(Me.Label4)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(0, 32)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(450, 318)
         Me.Panel2.TabIndex = 15
@@ -264,7 +268,7 @@ Partial Class Form_EnviarCorreo
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Form_EnviarCorreo"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form_EnviarCorreo"

@@ -23,6 +23,9 @@ Partial Class Form_AdmProductos
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.btn_Aplicar = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
@@ -50,15 +53,12 @@ Partial Class Form_AdmProductos
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ProdImagen = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.ProdImagen, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -68,10 +68,46 @@ Partial Class Form_AdmProductos
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(557, 37)
         Me.Panel1.TabIndex = 0
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.SistemaDeVentas.My.Resources.Resources.WhatsApp_Image_2021_06_11_at_10_44_39
+        Me.PictureBox2.Location = New System.Drawing.Point(482, 2)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(30, 32)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 3
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.SistemaDeVentas.My.Resources.Resources.icono_producto
+        Me.PictureBox1.Location = New System.Drawing.Point(9, 2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(30, 32)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 2
+        Me.PictureBox1.TabStop = False
+        '
+        'Button1
+        '
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Image = Global.SistemaDeVentas.My.Resources.Resources.iconox
+        Me.Button1.Location = New System.Drawing.Point(520, 4)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(34, 28)
+        Me.Button1.TabIndex = 1
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Panel2
         '
@@ -79,37 +115,47 @@ Partial Class Form_AdmProductos
         Me.Panel2.Controls.Add(Me.btnCancel)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel2.Location = New System.Drawing.Point(0, 328)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(557, 54)
         Me.Panel2.TabIndex = 1
         '
         'btn_Aplicar
         '
+        Me.btn_Aplicar.BackColor = System.Drawing.Color.Blue
+        Me.btn_Aplicar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btn_Aplicar.ForeColor = System.Drawing.SystemColors.Control
         Me.btn_Aplicar.Location = New System.Drawing.Point(470, 6)
         Me.btn_Aplicar.Name = "btn_Aplicar"
         Me.btn_Aplicar.Size = New System.Drawing.Size(84, 45)
         Me.btn_Aplicar.TabIndex = 51
         Me.btn_Aplicar.Text = "Guardar"
-        Me.btn_Aplicar.UseVisualStyleBackColor = True
+        Me.btn_Aplicar.UseVisualStyleBackColor = False
         '
         'btnCancel
         '
+        Me.btnCancel.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnCancel.Location = New System.Drawing.Point(3, 6)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(86, 45)
         Me.btnCancel.TabIndex = 50
         Me.btnCancel.Text = "Cancelar"
-        Me.btnCancel.UseVisualStyleBackColor = True
+        Me.btnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnCancel.UseVisualStyleBackColor = False
         '
         'btn_dltImg
         '
+        Me.btn_dltImg.BackColor = System.Drawing.Color.Red
+        Me.btn_dltImg.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btn_dltImg.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btn_dltImg.Location = New System.Drawing.Point(454, 217)
         Me.btn_dltImg.Name = "btn_dltImg"
         Me.btn_dltImg.Size = New System.Drawing.Size(58, 23)
         Me.btn_dltImg.TabIndex = 49
         Me.btn_dltImg.Text = "Eliminar"
-        Me.btn_dltImg.UseVisualStyleBackColor = True
+        Me.btn_dltImg.UseVisualStyleBackColor = False
         '
         'txt_Estado
         '
@@ -124,12 +170,15 @@ Partial Class Form_AdmProductos
         '
         'btn_AddImg
         '
+        Me.btn_AddImg.BackColor = System.Drawing.Color.LimeGreen
+        Me.btn_AddImg.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btn_AddImg.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btn_AddImg.Location = New System.Drawing.Point(454, 188)
         Me.btn_AddImg.Name = "btn_AddImg"
         Me.btn_AddImg.Size = New System.Drawing.Size(58, 23)
         Me.btn_AddImg.TabIndex = 45
         Me.btn_AddImg.Text = "Examinar"
-        Me.btn_AddImg.UseVisualStyleBackColor = True
+        Me.btn_AddImg.UseVisualStyleBackColor = False
         '
         'prov_cmb
         '
@@ -137,7 +186,7 @@ Partial Class Form_AdmProductos
         Me.prov_cmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.prov_cmb.FormattingEnabled = True
         Me.prov_cmb.Location = New System.Drawing.Point(173, 257)
-        Me.prov_cmb.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.prov_cmb.Margin = New System.Windows.Forms.Padding(2)
         Me.prov_cmb.Name = "prov_cmb"
         Me.prov_cmb.Size = New System.Drawing.Size(243, 21)
         Me.prov_cmb.TabIndex = 31
@@ -149,7 +198,7 @@ Partial Class Form_AdmProductos
         Me.Categ_cmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.Categ_cmb.FormattingEnabled = True
         Me.Categ_cmb.Location = New System.Drawing.Point(173, 233)
-        Me.Categ_cmb.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Categ_cmb.Margin = New System.Windows.Forms.Padding(2)
         Me.Categ_cmb.Name = "Categ_cmb"
         Me.Categ_cmb.Size = New System.Drawing.Size(243, 21)
         Me.Categ_cmb.TabIndex = 32
@@ -220,7 +269,7 @@ Partial Class Form_AdmProductos
         Me.Panel3.Controls.Add(Me.Categ_cmb)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel3.Location = New System.Drawing.Point(0, 37)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(557, 291)
         Me.Panel3.TabIndex = 2
@@ -376,42 +425,6 @@ Partial Class Form_AdmProductos
         Me.ProdImagen.TabIndex = 43
         Me.ProdImagen.TabStop = False
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.SistemaDeVentas.My.Resources.Resources.icono_producto
-        Me.PictureBox1.Location = New System.Drawing.Point(9, 2)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(30, 32)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
-        '
-        'Button1
-        '
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Image = Global.SistemaDeVentas.My.Resources.Resources.iconox
-        Me.Button1.Location = New System.Drawing.Point(520, 4)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(34, 28)
-        Me.Button1.TabIndex = 1
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.SistemaDeVentas.My.Resources.Resources.WhatsApp_Image_2021_06_11_at_10_44_39
-        Me.PictureBox2.Location = New System.Drawing.Point(482, 2)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(30, 32)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 3
-        Me.PictureBox2.TabStop = False
-        '
         'Form_AdmProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -422,17 +435,17 @@ Partial Class Form_AdmProductos
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Form_AdmProductos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form_AdmProductos"
         Me.Panel1.ResumeLayout(False)
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         CType(Me.ProdImagen, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

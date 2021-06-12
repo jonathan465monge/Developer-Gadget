@@ -74,7 +74,7 @@ Partial Class Form_Login
         '
         'txt_Usuario
         '
-        Me.txt_Usuario.BackColor = System.Drawing.Color.LemonChiffon
+        Me.txt_Usuario.BackColor = System.Drawing.Color.FloralWhite
         Me.txt_Usuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txt_Usuario.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Usuario.ForeColor = System.Drawing.Color.DimGray
@@ -87,7 +87,7 @@ Partial Class Form_Login
         '
         'txt_Pass
         '
-        Me.txt_Pass.BackColor = System.Drawing.Color.LemonChiffon
+        Me.txt_Pass.BackColor = System.Drawing.Color.FloralWhite
         Me.txt_Pass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txt_Pass.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Pass.ForeColor = System.Drawing.Color.DimGray
@@ -100,14 +100,15 @@ Partial Class Form_Login
         '
         'Button1
         '
-        Me.Button1.ForeColor = System.Drawing.Color.Black
+        Me.Button1.BackColor = System.Drawing.Color.Blue
+        Me.Button1.ForeColor = System.Drawing.SystemColors.Control
         Me.Button1.Location = New System.Drawing.Point(386, 199)
         Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(177, 32)
         Me.Button1.TabIndex = 3
         Me.Button1.Text = "Iniciar Sesión"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'lbl_UserInc
         '

@@ -228,11 +228,13 @@ Partial Class Form_Categoria
         '
         'btnnuevo
         '
-        Me.btnnuevo.BackColor = System.Drawing.Color.SteelBlue
+        Me.btnnuevo.BackColor = System.Drawing.Color.Blue
         Me.btnnuevo.Cursor = System.Windows.Forms.Cursors.Default
+        Me.btnnuevo.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnnuevo.ForeColor = System.Drawing.SystemColors.Control
         Me.btnnuevo.Location = New System.Drawing.Point(9, 300)
         Me.btnnuevo.Name = "btnnuevo"
-        Me.btnnuevo.Size = New System.Drawing.Size(75, 23)
+        Me.btnnuevo.Size = New System.Drawing.Size(79, 40)
         Me.btnnuevo.TabIndex = 2
         Me.btnnuevo.Text = "Registrar"
         Me.btnnuevo.UseVisualStyleBackColor = False
@@ -250,7 +252,8 @@ Partial Class Form_Categoria
         '
         'btneditar
         '
-        Me.btneditar.BackColor = System.Drawing.Color.Lime
+        Me.btneditar.BackColor = System.Drawing.Color.LimeGreen
+        Me.btneditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btneditar.Location = New System.Drawing.Point(94, 300)
         Me.btneditar.Name = "btneditar"
         Me.btneditar.Size = New System.Drawing.Size(67, 40)
@@ -261,9 +264,10 @@ Partial Class Form_Categoria
         'btncancelar
         '
         Me.btncancelar.BackColor = System.Drawing.Color.Red
-        Me.btncancelar.Location = New System.Drawing.Point(182, 300)
+        Me.btncancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btncancelar.Location = New System.Drawing.Point(167, 300)
         Me.btncancelar.Name = "btncancelar"
-        Me.btncancelar.Size = New System.Drawing.Size(62, 35)
+        Me.btncancelar.Size = New System.Drawing.Size(77, 40)
         Me.btncancelar.TabIndex = 4
         Me.btncancelar.Text = "Cancelar"
         Me.btncancelar.UseVisualStyleBackColor = False

@@ -24,27 +24,30 @@ Partial Class Form_Vuelto
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.btnRealizarVenta = New System.Windows.Forms.Button()
+        Me.lblCambio = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtCambio = New System.Windows.Forms.TextBox()
         Me.txtPago = New System.Windows.Forms.TextBox()
         Me.txtPagar = New System.Windows.Forms.TextBox()
-        Me.lblCambio = New System.Windows.Forms.Label()
-        Me.btnRealizarVenta = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
+        Me.Panel1.BackColor = System.Drawing.Color.SteelBlue
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(343, 35)
+        Me.Panel1.Size = New System.Drawing.Size(257, 28)
         Me.Panel1.TabIndex = 0
         '
         'Panel2
         '
+        Me.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel2.Controls.Add(Me.btnRealizarVenta)
         Me.Panel2.Controls.Add(Me.lblCambio)
         Me.Panel2.Controls.Add(Me.Label3)
@@ -54,18 +57,46 @@ Partial Class Form_Vuelto
         Me.Panel2.Controls.Add(Me.txtPago)
         Me.Panel2.Controls.Add(Me.txtPagar)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel2.Location = New System.Drawing.Point(0, 35)
+        Me.Panel2.Location = New System.Drawing.Point(0, 28)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(343, 259)
+        Me.Panel2.Size = New System.Drawing.Size(257, 211)
         Me.Panel2.TabIndex = 1
+        '
+        'btnRealizarVenta
+        '
+        Me.btnRealizarVenta.BackColor = System.Drawing.Color.Blue
+        Me.btnRealizarVenta.Enabled = False
+        Me.btnRealizarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnRealizarVenta.ForeColor = System.Drawing.SystemColors.Control
+        Me.btnRealizarVenta.Location = New System.Drawing.Point(58, 168)
+        Me.btnRealizarVenta.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnRealizarVenta.Name = "btnRealizarVenta"
+        Me.btnRealizarVenta.Size = New System.Drawing.Size(128, 32)
+        Me.btnRealizarVenta.TabIndex = 7
+        Me.btnRealizarVenta.Text = "Confirmar Venta"
+        Me.btnRealizarVenta.UseVisualStyleBackColor = False
+        '
+        'lblCambio
+        '
+        Me.lblCambio.AutoSize = True
+        Me.lblCambio.Font = New System.Drawing.Font("Microsoft YaHei", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCambio.Location = New System.Drawing.Point(9, 132)
+        Me.lblCambio.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblCambio.Name = "lblCambio"
+        Me.lblCambio.Size = New System.Drawing.Size(73, 20)
+        Me.lblCambio.TabIndex = 6
+        Me.lblCambio.Text = "Cambio: "
+        Me.lblCambio.Visible = False
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft YaHei", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(12, 109)
+        Me.Label3.Location = New System.Drawing.Point(9, 89)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(94, 25)
+        Me.Label3.Size = New System.Drawing.Size(73, 20)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Cambio: "
         '
@@ -73,9 +104,10 @@ Partial Class Form_Vuelto
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(12, 56)
+        Me.Label2.Location = New System.Drawing.Point(9, 46)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(109, 25)
+        Me.Label2.Size = New System.Drawing.Size(83, 20)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Paga con: "
         '
@@ -83,64 +115,48 @@ Partial Class Form_Vuelto
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft YaHei", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(12, 3)
+        Me.Label1.Location = New System.Drawing.Point(9, 2)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(145, 25)
+        Me.Label1.Size = New System.Drawing.Size(112, 20)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Total a pagar: "
         '
         'txtCambio
         '
-        Me.txtCambio.Location = New System.Drawing.Point(17, 137)
+        Me.txtCambio.Location = New System.Drawing.Point(13, 111)
+        Me.txtCambio.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtCambio.Name = "txtCambio"
         Me.txtCambio.ReadOnly = True
-        Me.txtCambio.Size = New System.Drawing.Size(314, 22)
+        Me.txtCambio.Size = New System.Drawing.Size(236, 20)
         Me.txtCambio.TabIndex = 2
         Me.txtCambio.Text = "0"
         '
         'txtPago
         '
-        Me.txtPago.Location = New System.Drawing.Point(17, 84)
+        Me.txtPago.Location = New System.Drawing.Point(13, 68)
+        Me.txtPago.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtPago.Name = "txtPago"
-        Me.txtPago.Size = New System.Drawing.Size(314, 22)
+        Me.txtPago.Size = New System.Drawing.Size(236, 20)
         Me.txtPago.TabIndex = 1
         '
         'txtPagar
         '
-        Me.txtPagar.Location = New System.Drawing.Point(17, 31)
+        Me.txtPagar.Location = New System.Drawing.Point(13, 25)
+        Me.txtPagar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtPagar.Name = "txtPagar"
         Me.txtPagar.ReadOnly = True
-        Me.txtPagar.Size = New System.Drawing.Size(314, 22)
+        Me.txtPagar.Size = New System.Drawing.Size(236, 20)
         Me.txtPagar.TabIndex = 0
-        '
-        'lblCambio
-        '
-        Me.lblCambio.AutoSize = True
-        Me.lblCambio.Font = New System.Drawing.Font("Microsoft YaHei", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCambio.Location = New System.Drawing.Point(12, 162)
-        Me.lblCambio.Name = "lblCambio"
-        Me.lblCambio.Size = New System.Drawing.Size(94, 25)
-        Me.lblCambio.TabIndex = 6
-        Me.lblCambio.Text = "Cambio: "
-        Me.lblCambio.Visible = False
-        '
-        'btnRealizarVenta
-        '
-        Me.btnRealizarVenta.Enabled = False
-        Me.btnRealizarVenta.Location = New System.Drawing.Point(78, 207)
-        Me.btnRealizarVenta.Name = "btnRealizarVenta"
-        Me.btnRealizarVenta.Size = New System.Drawing.Size(170, 40)
-        Me.btnRealizarVenta.TabIndex = 7
-        Me.btnRealizarVenta.Text = "Confirmar Venta"
-        Me.btnRealizarVenta.UseVisualStyleBackColor = True
         '
         'Form_Vuelto
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(343, 294)
+        Me.ClientSize = New System.Drawing.Size(257, 239)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "Form_Vuelto"
         Me.Text = "Form_Vuelto"
         Me.Panel2.ResumeLayout(False)
