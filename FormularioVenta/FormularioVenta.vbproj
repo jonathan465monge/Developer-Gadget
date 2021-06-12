@@ -165,6 +165,12 @@
     <Compile Include="Datos\orden_compra.vb" />
     <Compile Include="Datos\Proveedor.vb" />
     <Compile Include="Datos\Usser.vb" />
+    <Compile Include="Formularios\Form_Backup.Designer.vb">
+      <DependentUpon>Form_Backup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Form_Backup.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\Form_Multi.Designer.vb">
       <DependentUpon>Form_Multi.vb</DependentUpon>
     </Compile>
@@ -296,12 +302,6 @@
     <Compile Include="Accesos\FProducto.vb" />
     <Compile Include="Datos\Venta.vb" />
     <Compile Include="Accesos\FVenta.vb" />
-    <Compile Include="Reportes\Form_RptVenta.Designer.vb">
-      <DependentUpon>Form_RptVenta.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Reportes\Form_RptVenta.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Reportes\InformeCompras.designer.vb">
       <DependentUpon>InformeCompras.vb</DependentUpon>
     </Compile>
@@ -340,6 +340,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Formularios\Form_Backup.resx">
+      <DependentUpon>Form_Backup.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Form_Multi.resx">
       <DependentUpon>Form_Multi.vb</DependentUpon>
     </EmbeddedResource>
@@ -397,9 +400,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Form_Producto.resx">
       <DependentUpon>Form_Producto.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\Form_RptVenta.resx">
-      <DependentUpon>Form_RptVenta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\InformeCompras.resx">
       <DependentUpon>InformeCompras.vb</DependentUpon>
@@ -593,6 +593,10 @@
     <None Include="Resources\WhatsApp Image 2021-06-11 at 10.44.39.jpeg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\candado.png" />
+    <None Include="Resources\candado %281%29.png" />
+    <None Include="Resources\candado %282%29.png" />
+    <None Include="Resources\simbolo-de-candado-de-bloqueo-para-interfaz-de-seguridad.png" />
     <Content Include="SqlServerTypes\Loader.cs" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">

@@ -63,6 +63,36 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property candado() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("candado", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property candado__1_() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("candado (1)", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property candado__2_() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("candado (2)", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property clientes() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("clientes", resourceCulture)
@@ -416,6 +446,16 @@ Namespace My.Resources
         Friend ReadOnly Property reportes1() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("reportes1", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property simbolo_de_candado_de_bloqueo_para_interfaz_de_seguridad() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("simbolo-de-candado-de-bloqueo-para-interfaz-de-seguridad", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

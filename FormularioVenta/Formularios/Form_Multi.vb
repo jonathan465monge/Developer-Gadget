@@ -2,7 +2,7 @@
 Imports System.Data.SqlClient
 
 Public Class Form_Multi
-
+    Public user As String
     Dim dt As DataTable
     Private Sub Form_Multi_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Pan1()
@@ -15,6 +15,9 @@ Public Class Form_Multi
             btnInicioVend.Visible = False
             Combox.correo = correoUser.Text
             Combox.labelFlag = "0"
+            BtnCopia.Visible = True
+            user = Nothing
+            user = "admid"
 
         ElseIf LabelFlagAcceso.Text = "ventas" Then
             btn_Inv.Visible = False
@@ -28,6 +31,9 @@ Public Class Form_Multi
             Combox.labelFlag = "Inventario"
             LabelFlagAcceso.Text = Combox.labelFlag
             Combox.vendedor = NombreUser.Text
+            BtnCopia.Visible = True
+            user = Nothing
+            user = "vendedor"
 
             Panel15.Visible = False
             Panel1.Visible = False
@@ -123,8 +129,6 @@ Public Class Form_Multi
             Me.panelInicio.Width = panelInicio.Width + 40
         End If
     End Sub
-
-
     Dim cGrip As Integer = 10
 
     Protected Overrides Sub WndProc(ByRef m As Message)
@@ -210,7 +214,6 @@ Public Class Form_Multi
         drd.Close()
         con.Close()
     End Sub
-
 
     Private Sub btn_ventas_Click(sender As Object, e As EventArgs) Handles btn_ventas.Click
         Panel7.BackColor = Color.Green
@@ -342,7 +345,7 @@ Public Class Form_Multi
         Panel6.BackColor = Color.Gold
         Panel5.BackColor = Color.Green
         Panel16.BackColor = Color.Gold
-        AbrirForm(Of Form_RptVenta)()
+        AbrirForm(Of Form_Reportes)()
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
@@ -405,6 +408,20 @@ Public Class Form_Multi
         Panel16.BackColor = Color.Green
         PanMul.Visible = True
         PanMul.BringToFront()
+    End Sub
+
+    Private Sub BtnCopia_Click(sender As Object, e As EventArgs) Handles BtnCopia.Click
+        PanMul.Visible = False
+        Panel15.BackColor = Color.Gold
+        Panel9.BackColor = Color.Gold
+        Panel1.BackColor = Color.Gold
+        Panel2.BackColor = Color.Red
+        Panel3.BackColor = Color.Gold
+        Panel8.BackColor = Color.Gold
+        Panel10.BackColor = Color.Gold
+        Panel11.BackColor = Color.Gold
+        Form_Backup.usu = LabelFlagAcceso.Text
+        AbrirForm(Of Form_Backup)()
     End Sub
 
     Protected Overrides Sub OnPaint(ByVal e As PaintEventArgs)
